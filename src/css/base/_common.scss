@@ -1,0 +1,6 @@
+//change box-model about everything
+html *,
+::before,
+::after {
+  box-sizing: border-box;
+}
