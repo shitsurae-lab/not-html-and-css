@@ -1,4 +1,12 @@
 @use 'base' as *;
+
 h1 {
   color: mediumseagreen;
+}
+
+html {
+  font-size: 14px;
+  @include mq(md) {
+    font-size: 16px;
+  }
 }

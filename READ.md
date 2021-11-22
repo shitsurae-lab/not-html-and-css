@@ -33,3 +33,25 @@
 | <section></section> |     |
 | <nav></nav>         |     |
 | <div></div>         |     |
+
+# map-get and mixin
+
+参考: https://bit.ly/3CEH4NH
+
+```CSS
+//Set Map
+$breakpoint: (
+  sm: 'screen and (min-width: 576px)',
+  md: 'screen and (min-width: 768px)',
+  lg: 'screen and (min-width: 992px)',
+  xl: 'screen and (min-width: 1200px)',
+  xxl: 'screen and (min-width: 1400px)',
+); //mapの')'の後ろにセミコロン
+
+//Set mixin
+@mixin mq($bp) {
+  @media #{map-get($breakpoint,$bp)} {
+    @content; //@contentの後ろにセミコロン
+  }
+}
+```
