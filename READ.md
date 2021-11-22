@@ -8,7 +8,7 @@
 
 ## モジュールの作成
 
-コンテナを情報の内容やレイアウト似合わせて分割する
+コンテナを情報の内容やレイアウトに合わせて分割する
 
 ##　無視すべき点
 背景画像がある場合でも CSS で表現できる箇所(あしらいなど)の場合は分割箇所としては無視をする
@@ -33,6 +33,34 @@
 | <section></section> |     |
 | <nav></nav>         |     |
 | <div></div>         |     |
+
+```HTML
+<body class="post">
+  <header class="page-header">
+    <div class="header-container">
+    </div>
+  </header>
+  <div class="breadcrumb">
+    <div class="bc-container">
+    </div>
+  </div>
+  <main class="page-main">
+    <div class="main-container">
+    </div>
+  </main>
+  <footer class="page-footer">
+    <div class="footer-container">
+    </div>
+  </footer>
+</body>
+```
+
+## コンテナには次の 4 つのスタイルを二重構造のコンテナ HTML セットを利用して記述する
+
+1. コンテナの幅を設定
+2. コンテナをビューポートの中央に配置
+3. 上下のスペースを調整
+4. 背景色や背景画像を settei
 
 # map-get and mixin
 
