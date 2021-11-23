@@ -14,7 +14,7 @@ module.exports = {
   entry: './src/js/main.js',
   output: {
     path: path.resolve(__dirname, './dist'), //絶対パス。第一引数(__dirname)で現在のフォルダ階層を示す
-    filename: 'js/[name]-[contenthash].js', //出力されるjsの名称変更。__dirnameの後ろのため、先頭に'./'とはつけない
+    filename: 'js/[name]-[contenthash].js', //出力されるjsの名称変更。__dirnameの後ろのため、先頭に'./'とはつけない → 間違い: 先頭は'./'
     publicPath: '/',
     //backgound-imageなどCSSから画像を出力する際に正しくパスが出力されるよう"publicPath"を表記する
   },
