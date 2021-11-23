@@ -10,6 +10,12 @@ html {
     font-size: 16px;
   }
 }
+.mv {
+  padding-top: 60%;
+  background-image: url('../images/mainvisual.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .wrapper {
   padding: 0 4%;
   @include mq(md) {
