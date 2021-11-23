@@ -62,7 +62,7 @@ module.exports = {
             loader: 'css-loader',
             //SCSSのソースマップはかなり重くなるので開発時に必要なときだけtrueにするとよいらしい
             options: {
-              sourceMap: false,
+              sourceMap: true,
             },
           },
           {
