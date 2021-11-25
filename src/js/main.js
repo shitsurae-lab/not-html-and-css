@@ -4,6 +4,9 @@
 //normalize.css
 import 'normalize.css';
 
+//original drawer.js
+import drawer from './drawer.js';
+
 /*
  *CSS
  */
