@@ -136,6 +136,10 @@ module.exports = {
       template: './src/templates/index.pug',
       filename: 'index.html',
     }),
+    new HtmlWebpackPlugin({
+      template: './src/templates/about.pug',
+      filename: 'about.html',
+    }),
 
     new CleanWebpackPlugin(),
   ],
