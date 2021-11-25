@@ -349,7 +349,7 @@ html *,
 }
 
 h1 {
-  color: #2b2b2b;
+  color: #fff;
   font-size: 24px;
 }
 
@@ -362,11 +362,30 @@ html {
   }
 }
 
-.mv {
-  padding-top: 60%;
+.p_header__background {
+  height: 66vh;
   background-image: url(/images/mainvisual-ed95740396d96cd6fd77.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+}
+
+.p_header__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.p_nav__list {
+  display: flex;
+  list-style-type: none;
+}
+.p_nav__list a {
+  color: #ffffff;
+}
+
+.logo {
+  flex: 0 1 auto;
+  margin: 0;
 }
 
 .wrapper {
@@ -386,4 +405,4 @@ img {
   vertical-align: bottom;
 }
 
-/*# sourceMappingURL=main-ed2a80faa7c24b86e8a1.css.map*/
+/*# sourceMappingURL=main-5e67852cffde25b91138.css.map*/

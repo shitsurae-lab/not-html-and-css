@@ -6,8 +6,20 @@ html(lang="ja")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Not HTML and CSS
   body
-    .mv
+    header.p_header.p_header__background
+      .p_header__container
+        h1.logo ロゴ
+        button.btn-menu menu
+        nav.p_nav
+          ul.p_nav__list
+            //- each val in ['Home','About','Contact']
+            //-   li.p_nav__item= val
+            li.p-nav__item: a(href="/") Home
+            li.p-nav__item: a(href="/about.html") About
+            li.p-nav__item: a(href="/contact") Contact
+    .p_breadcrumb
+      ul.p-bread
     .wrapper
-      h1 教科書では教えてくれないHTML and CSS
+      h2 教科書では教えてくれないHTML and CSS
       section: .section-container
         img(src="../images/postheaderimage.jpg")
