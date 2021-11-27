@@ -20,3 +20,11 @@ $breakpoint: (
     @content; //@contentの後ろにセミコロン
   }
 }
+
+//コンテナ幅を中央に配置
+@mixin mainContainer($mw: 1024px, $margin: 0 auto, $padding: 80px 20px 0) {
+  max-width: $mw;
+  margin: $margin;
+  padding: $padding;
+  @content;
+}
