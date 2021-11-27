@@ -140,6 +140,10 @@ module.exports = {
       template: './src/templates/about.pug',
       filename: 'about.html',
     }),
+    new HtmlWebpackPlugin({
+      template: './src/templates/sample.pug',
+      filename: 'sample.html',
+    }),
 
     new CleanWebpackPlugin(),
   ],
