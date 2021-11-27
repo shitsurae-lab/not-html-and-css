@@ -142,6 +142,9 @@ img {
 //メインコンテナ
 .post .ly_main_container {
   padding: 80px 4% 0;
+  background-image: url('../images/post-bg.svg');
+  background-repeat: repeat-x;
+  background-position: 0 10px;
   @include mq(md) {
     @include mainContainer();
     // max-width: 1024px;

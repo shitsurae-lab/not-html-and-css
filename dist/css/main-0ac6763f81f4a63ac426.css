@@ -493,6 +493,9 @@ img {
 
 .post .ly_main_container {
   padding: 80px 4% 0;
+  background-image: url(/59c5474e0ef6b53cc04e.svg);
+  background-repeat: repeat-x;
+  background-position: 0 10px;
 }
 @media screen and (min-width: 768px) {
   .post .ly_main_container {
@@ -527,4 +530,4 @@ img {
   }
 }
 
-/*# sourceMappingURL=main-3806fda1950b65532adf.css.map*/
+/*# sourceMappingURL=main-0ac6763f81f4a63ac426.css.map*/
