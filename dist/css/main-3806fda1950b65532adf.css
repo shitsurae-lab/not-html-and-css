@@ -348,20 +348,9 @@ html *,
   box-sizing: border-box;
 }
 
-h1 {
-  color: #fff;
-  font-size: 24px;
-}
-
-html {
-  font-size: 14px;
-}
-@media screen and (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
+/*
+** sample.pug
+*/
 .p_header__background {
   height: 66vh;
   background-image: url(/images/mainvisual-ed95740396d96cd6fd77.jpg);
@@ -399,6 +388,15 @@ html {
   }
 }
 
+html {
+  font-size: 14px;
+}
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -422,6 +420,7 @@ img {
 .p_logo {
   font-size: 1.875rem;
   margin: 0;
+  color: #ffffff;
 }
 
 .drawer_btn {
@@ -464,4 +463,68 @@ img {
   white-space: nowrap;
 }
 
-/*# sourceMappingURL=main-d93419c2a617c91a62b1.css.map*/
+/*
+* ************************
+ Non HTML & CSS Chapter2
+* ************************
+*/
+.ly_header {
+  background-image: url(/50074a3e202166a0f870.svg);
+  background-repeat: repeat-x;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.ly_breadcrumb {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .ly_breadcrumb {
+    display: block;
+    background: #efefef;
+  }
+}
+@media screen and (min-width: 768px) {
+  .ly_breadcrumb_container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 12px 20px;
+  }
+}
+
+.post .ly_main_container {
+  padding: 80px 4% 0;
+}
+@media screen and (min-width: 768px) {
+  .post .ly_main_container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 80px 20px 0;
+  }
+}
+
+.post .ly_bottom_container {
+  background: url(/120b004634840c5f2847.svg);
+  padding: 60px 4% 0;
+}
+@media screen and (min-width: 768px) {
+  .post .ly_bottom_container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 60px 20px 0;
+  }
+}
+
+.post .ly_footer_container {
+  color: #ffffff;
+  background: #2b2b2b;
+  padding: 60px 4%;
+}
+@media screen and (min-width: 768px) {
+  .post .ly_footer_container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 60px 20px;
+  }
+}
+
+/*# sourceMappingURL=main-3806fda1950b65532adf.css.map*/

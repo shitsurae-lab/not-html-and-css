@@ -1,17 +1,8 @@
 @use 'base' as *;
 
-h1 {
-  // color: #2b2b2b;
-  color: #fff;
-  font-size: 24px;
-}
-
-html {
-  font-size: 14px;
-  @include mq(md) {
-    font-size: 16px;
-  }
-}
+/*
+** sample.pug
+*/
 .p_header__background {
   // padding-top: 66%;
   height: 66vh;
@@ -47,6 +38,14 @@ html {
     margin: 0 auto;
   }
 }
+
+html {
+  font-size: 14px;
+  @include mq(md) {
+    font-size: 16px;
+  }
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -72,6 +71,7 @@ img {
 .p_logo {
   font-size: 1.875rem; //30px
   margin: 0;
+  color: $color-primary;
 }
 //ドロワーボタン
 .drawer_btn {
@@ -111,4 +111,60 @@ img {
   color: $color-primary;
   text-decoration: none;
   white-space: nowrap;
+}
+
+/*
+* ************************
+ Non HTML & CSS Chapter2
+* ************************
+*/
+//ヘッダー: 親要素に背景画像を設置
+.ly_header {
+  background-image: url('../images/haeder-topline.svg');
+  background-repeat: repeat-x;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+//パンくずリスト
+.ly_breadcrumb {
+  display: none;
+  @include mq(md) {
+    display: block;
+    background: #efefef;
+  }
+  &_container {
+    @include mq(md) {
+      @include mainContainer($padding: 12px 20px);
+    }
+  }
+}
+
+//メインコンテナ
+.post .ly_main_container {
+  padding: 80px 4% 0;
+  @include mq(md) {
+    @include mainContainer();
+    // max-width: 1024px;
+    // margin: 0 auto;
+    // padding: 80px 20px 0;
+  }
+}
+
+//ページ下部
+.post .ly_bottom_container {
+  background: url('../images/bottom-bg.svg');
+  padding: 60px 4% 0;
+  @include mq(md) {
+    @include mainContainer($padding: 60px 20px 0);
+  }
+}
+
+//フッター
+.post .ly_footer_container {
+  color: $color-primary;
+  background: $color-secondary;
+  padding: 60px 4%;
+  @include mq(md) {
+    @include mainContainer($padding: 60px 20px);
+  }
 }
