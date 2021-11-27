@@ -5,21 +5,15 @@ html(lang="ja")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Not HTML and CSS
-  body
-    header.p_header__background
-      .p_header__container
-        h1.logo ロゴ
-        button.btn-menu menu
-        nav.p_nav
-          ul.p_nav__list--00
-            //- each val in ['Home','About','Contact']
-            //-   li.p_nav__item= val
-            li.p-nav__item: a(href="/") Home
-            li.p-nav__item: a(href="/about.html") About
-            li.p-nav__item: a(href="/contact") Contact
-    .p_breadcrumb
-      ul.p-bread
-    .wrapper
-      h2 教科書では教えてくれないHTML and CSS
-      section: .section-container
-        img(src="../images/postheaderimage.jpg")
+  body.post
+    header.ly_header: .ly_header_container
+      h1 ロゴ
+    .ly_breadcrumb: .ly_breadcrumb_container
+      div Home &gt; パンくずリスト
+    main.ly_main: .ly_main_container
+      p メインコンテナ
+      p 吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ
+    .ly_bottom: .ly_bottom_container
+      p ページ下部コンテンツ
+    footer.ly_footer: .ly_footer_container
+      p フッターコンテンツ
