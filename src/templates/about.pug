@@ -10,11 +10,6 @@ html(lang="ja")
       .p_header__inner
         h1.p_logo Logo
         button.drawer_btn メニュー
-      nav.drawer_nav
-        ul.drawer_nav__list
-          li.drawer_nav__item: a(href="/") Home
-          li.drawer_nav__item: a(href="/about.html") About
-          li.drawer_nav__item: a(href="/sample.html") Sample
-          li.drawer_nav__item: a(href="/contact") Contact
+      include _nav.pug
     main: .p_main__container
       p これはダミーテキストです。これはダミーテキストです。これはダミーテキストです。これはダミーテキストです。
