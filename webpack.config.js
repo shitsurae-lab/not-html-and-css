@@ -149,10 +149,10 @@ module.exports = {
   ],
   //webpack-dev-server ポート番号変更 https://bit.ly/3Caxfbp
   devServer: {
-    port: 3000, // ポート番号
+    port: 8080, // ポート番号
   },
   // node_modules を監視（watch）対象から除外
   watchOptions: {
-    ignored: /node_modules/, //正規表現で指定
+    ignored: /node_modules/,
   },
 };
