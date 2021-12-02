@@ -131,15 +131,13 @@ var __webpack_exports__ = {};
   !*** ./src/js/main.js ***!
   \************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var normalize_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! normalize.css */ "./node_modules/normalize.css/normalize.css");
-/* harmony import */ var _drawer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./drawer.js */ "./src/js/drawer.js");
-/* harmony import */ var _drawer_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_drawer_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _drawer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./drawer.js */ "./src/js/drawer.js");
+/* harmony import */ var _drawer_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_drawer_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var normalize_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! normalize.css */ "./node_modules/normalize.css/normalize.css");
 /* harmony import */ var _css_style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../css/style.scss */ "./src/css/style.scss");
 /*
  *JavaScript
  */
-//normalize.css
-
 
 //original drawer.js
 
@@ -147,10 +145,12 @@ __webpack_require__.r(__webpack_exports__);
 /*
  *CSS
  */
+//normalize.css
+
 
 
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=main-3fae6e8c130d8401f45e.js.map
+//# sourceMappingURL=main-ac54f539dc02d537dcd0.js.map
