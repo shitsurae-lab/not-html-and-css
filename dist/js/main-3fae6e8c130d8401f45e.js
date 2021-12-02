@@ -34,7 +34,14 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (() => {
 
 const btn = document.querySelector('.drawer_btn');
+// export function btn() {
+//   querySelector('.drawer_btn');
+// }
 const nav = document.querySelector('.drawer_nav');
+
+// export function nav() {
+//   querySelector('.drawer_btn');
+// }
 
 btn.addEventListener('click', () => {
   nav.classList.toggle('open-menu');
@@ -146,4 +153,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=main-b05ccd2e25939ed944ba.js.map
+//# sourceMappingURL=main-3fae6e8c130d8401f45e.js.map
