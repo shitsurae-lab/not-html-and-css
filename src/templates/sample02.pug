@@ -45,3 +45,77 @@ block content
         h1 タイトル
       default
         p 本文
+
+    //- 連想配列例　https://bit.ly/3GdZruZ
+
+    -
+
+      var obj ={
+        title: 'Home',
+        description: 'hogehoge',
+        date: '2021/12/04'
+      }
+
+    ul
+      each val, key in obj
+        li(class=key) !{val}
+
+    //- 配列に入れた連想配列
+
+    -
+
+      var arr = [
+        {
+          title: 'fuga01',
+          description: 'fuga desc',
+          date: '2021/12/08'
+        },
+        {
+          title: 'fuga02',
+          description: 'fuga02 desc',
+          date: '2021/12/08'
+        },
+        {
+          title: 'fuga03',
+          description: 'fuga03 desc',
+          date: '2021/12/08'
+        },
+      ];
+
+    //- 取り出し
+    ul
+      each val in arr
+        li
+          h2 #{val.title}
+          p #{val.description}
+          p #{val.date}
+
+    //- 配列を記述、繰り返しで出力
+    -
+
+      var nav = [
+        {
+          title: 'fuga01',
+          url: 'https://qiita.com',
+          date: '2021/12/08'
+        },
+        {
+          title: 'fuga02',
+          url: 'https://qiita.com',
+          date: '2021/12/08'
+        },
+        {
+          title: 'fuga03',
+          url: 'https://qiita.com',
+          date: '2021/12/08'
+        },
+      ];
+
+    //- 取り出し
+    ul
+      each val in nav
+        li
+          h2 #{val.title}
+          a(href=val.url) #{val.title}
+          //- a(href=val.url)=val.titleでも可
+          p #{val.url}
