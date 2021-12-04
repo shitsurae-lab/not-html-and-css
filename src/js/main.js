@@ -3,7 +3,8 @@
  */
 
 //original drawer.js
-import Default from './drawer.js';
+//import Default from './drawer.js';
+import './drawer.js';
 
 /*
  *CSS
