@@ -1,0 +1,47 @@
+//- Pugの書き方まとめ
+//- http://bit.ly/irisash-pug
+//- Pug書き方基本 https://bit.ly/codeisle01
+//- Pug include等 http://bit.ly/codeisle02
+extends _header
+block content
+    - var name = 'Pug';
+    p 私の名前は#{name}です
+    p この
+      //- パイプライン(一行表示)
+      | 文章は一行表示
+      | になります。
+    br
+    | 改行はbrを使用します
+    p.
+      また、「タグ名+ドット」後の段落はそのタグによって囲まれます
+
+    //- 繰り返し記法①
+    - for(var i=0;i<3;i++)
+      p #{i}
+
+    //- 繰り返し記法②
+    - var arr = ['pug','Jade', 'ejs']
+    each el in arr
+      p:span #{el}
+
+    //- mixin and block(mixin)
+    mixin dammy(first,color)
+      p(style="color:"+color) #{first}
+      if block
+        block
+      else
+        p No block
+    +dammy('Cheese','#444')
+      p This is block!
+
+    //- そのままhtml
+    <p>そのままHTML</p>
+
+    //- 条件分岐
+    - var page = 'index';
+
+    case page
+      when 'index'
+        h1 タイトル
+      default
+        p 本文
