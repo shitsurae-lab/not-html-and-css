@@ -144,6 +144,10 @@ module.exports = {
       template: './src/templates/sample.pug',
       filename: 'sample.html',
     }),
+    new HtmlWebpackPlugin({
+      template: './src/templates/sample02.pug',
+      filename: 'sample02.html',
+    }),
 
     new CleanWebpackPlugin(),
   ],
