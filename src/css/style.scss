@@ -152,6 +152,31 @@ img {
     // margin: 0 auto;
     // padding: 80px 20px 0;
   }
+  //ポストヘッダー
+  .bl_post_header h1 {
+    margin: 0 0 20px;
+    font-size: 1.875rem;
+    line-height: 1.5;
+  }
+  //ポストコンテンツ
+  .bl_post_content {
+    h2 {
+      margin: 60px 0 30px;
+      padding: 1rem 0;
+      border-top: 1px solid $color-secondary;
+      border-bottom: 1px solid $color-secondary;
+      font-size: 1.25rem;
+    }
+    p {
+      margin: 30px 0;
+      line-height: 1.9;
+      text-align: justify;
+    }
+    & > *:first-child {
+      //ポストコンテンツ内、一番最初の要素のみmargin-topを0にする
+      margin-top: 0;
+    }
+  }
 }
 
 //ページ下部
