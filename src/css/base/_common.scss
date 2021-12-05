@@ -1,8 +1,28 @@
+@charset 'utf-8';
+
 //change box-model about everything
 html *,
 ::before,
 ::after {
   box-sizing: border-box;
+}
+
+//Google fonts(Noto Sans JP)
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&display=swap');
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400; //Noto Sans JPのレギュラーウェイトを指定
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 th,
+strong {
+  font-weight: 700;
 }
 
 //Set Map
