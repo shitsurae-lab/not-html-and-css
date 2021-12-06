@@ -177,6 +177,27 @@ img {
       margin-top: 0;
     }
   }
+  //ポストフッター
+  .bl_post_footer {
+    p {
+      padding-left: 24px;
+      position: relative;
+      &::before {
+        display: block;
+        content: '\f164';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 700;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+    }
+    li {
+      font-family: 'Roboto';
+      font-weight: 400;
+    }
+  }
 }
 
 //ページ下部
