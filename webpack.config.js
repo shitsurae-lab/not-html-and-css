@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const { loader } = require('mini-css-extract-plugin');
 // const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const GoogleFontsPlugin = require('@beyonk/google-fonts-webpack-plugin');
 
 module.exports = {
   //npx webpackのモード指定。デフォルトは'production'
@@ -57,6 +58,9 @@ module.exports = {
           {
             // loader: 'style-loader',
             loader: MiniCssExtractPlugin.loader,
+            options: {
+              esModule: false,
+            },
           },
           {
             loader: 'css-loader',
@@ -124,6 +128,17 @@ module.exports = {
     ],
   },
   plugins: [
+    //@beyonk/google-fonts-webpack-plugin https://bit.ly/332RTNp
+    new GoogleFontsPlugin({
+      fonts: [
+        { family: 'Roboto', variants: ['400'], display: 'block' },
+        {
+          family: 'Croissant One',
+          variants: ['400'],
+          display: 'swap',
+        },
+      ],
+    }),
     // new VueLoaderPlugin(),
     new MiniCssExtractPlugin({
       //srcと同じ名前のCSSファイルがdistに出力される(src内のmy.cssにあわせる=> main.css)
