@@ -82,7 +82,7 @@ module.exports = {
       },
       {
         //Asset Modulesを使う際の記述
-        test: /\.(png|jpg)/,
+        test: /\.(png|jpg|svg)/,
         type: 'asset/resource',
         generator: {
           filename: 'images/[name]-[contenthash][ext]', //[name]の代わりに[name]-[contenthash]とすることでファイル名を強制的にキャッシュすることができる。
