@@ -62,7 +62,7 @@ img {
   padding: 0.5rem;
   // text-align: right;
 }
-.p_header__inner {
+.p_header_inner {
   display: flex;
   justify-content: space-between;
   padding: 0 1rem;
@@ -83,6 +83,7 @@ img {
   font-size: 1rem;
   cursor: pointer;
   line-height: 1;
+  width: 112px;
 }
 //ドロワーナビゲーション
 .drawer_nav {
@@ -112,6 +113,27 @@ img {
   color: $color-primary;
   text-decoration: none;
   white-space: nowrap;
+}
+
+.p_main_container {
+  p:first-child {
+    padding-left: 24px;
+    position: relative;
+    &::before {
+      display: block;
+      content: '\f164';
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 700;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+  }
+  li {
+    font-family: 'Roboto';
+    font-weight: 400;
+  }
 }
 
 /*
@@ -153,10 +175,42 @@ img {
     // padding: 80px 20px 0;
   }
   //ポストヘッダー
-  .bl_post_header h1 {
-    margin: 0 0 20px;
-    font-size: 1.875rem;
-    line-height: 1.5;
+  .bl_post_header {
+    h1 {
+      margin: 0 0 20px;
+      font-size: 1.875rem;
+      line-height: 1.5;
+    }
+    .bl_postTag {
+      line-height: 2; //spanにmargin-top,margin-bottomが指定できない為、親要素にline-height設定
+      margin-bottom: 5px;
+      font-size: 0.75rem; //12px(root 16px)
+      span {
+        //タグの背景・margin指定
+        margin-right: 3px;
+        padding: 2px 10px;
+        background: $color-info;
+        border-radius: 100px;
+        a {
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    }
+    .bl_postInfo {
+      margin-bottom: 3px;
+      padding-bottom: 15px;
+      background: url('../images/post-line.svg') bottom repeat-x;
+      font-size: 0.75rem;
+      text-align: right;
+      span {
+        margin-right: 10px;
+      }
+      i {
+        padding-right: 5px;
+        color: $color-info;
+      }
+    }
   }
   //ポストコンテンツ
   .bl_post_content {
@@ -176,27 +230,82 @@ img {
       //ポストコンテンツ内、一番最初の要素のみmargin-topを0にする
       margin-top: 0;
     }
+    //マーカー
+    mark {
+      background: linear-gradient(transparent 50%, #ffff7c 50%);
+    }
+    //figure and figcaption
+    .bl_photoCaption {
+      margin: 30px 0;
+      figcaption {
+        margin-top: 5px;
+        font-size: 0.75rem;
+        color: #747474;
+      }
+    }
+    //リスト
+    .bl_list {
+      margin: 30px 0;
+      li {
+        margin-bottom: 1rem;
+        line-height: 1.5;
+      }
+    }
+
+    //ボックスを囲む
+    .bl_infoBox {
+      margin: 30px 0;
+      padding: 2rem;
+      border: 4px solid #b8e5ea;
+    }
+
+    //回り込み
+    .bl_floatBox {
+      display: flow-root;
+      margin: 30px 0;
+      //floatBox内、テキストマージンを消す
+      p {
+        margin: 0;
+      }
+      .u-floatRight {
+        float: right;
+        margin: 0 0 1rem 1rem;
+        width: 40%;
+      }
+    }
+
+    //チャット
+    .bl_chat {
+      margin: 30px 0;
+      &_inner:nth-child(odd) {
+        display: flex;
+        margin: 15px 0;
+        .face {
+          margin-right: 15px;
+        }
+        .talk {
+          background: $color-light;
+        }
+      }
+      &_inner:nth-child(even) {
+        display: flex;
+        margin: 15px 0;
+        .face {
+          margin-right: 15px;
+        }
+      }
+      //共通
+      .talk {
+        padding: 1.5rem;
+        border-radius: 20px;
+        p {
+          margin: 0;
+        }
+      }
+    }
   }
   //ポストフッター
   .bl_post_footer {
-    p {
-      padding-left: 24px;
-      position: relative;
-      &::before {
-        display: block;
-        content: '\f164';
-        font-family: 'Font Awesome 5 Free';
-        font-weight: 700;
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-      }
-    }
-    li {
-      font-family: 'Roboto';
-      font-weight: 400;
-    }
   }
 }
 
