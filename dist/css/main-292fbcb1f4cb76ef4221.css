@@ -632,24 +632,35 @@ img {
   margin: 15px 0;
 }
 .post .ly_main_container .bl_post_content .bl_chat_inner:nth-child(odd) .face {
-  margin-right: 15px;
+  margin-right: 10px;
 }
 .post .ly_main_container .bl_post_content .bl_chat_inner:nth-child(odd) .talk {
   background: #b8e5ea;
 }
 .post .ly_main_container .bl_post_content .bl_chat_inner:nth-child(even) {
   display: flex;
+  flex-direction: row-reverse;
   margin: 15px 0;
 }
 .post .ly_main_container .bl_post_content .bl_chat_inner:nth-child(even) .face {
-  margin-right: 15px;
+  margin-left: 10px;
+}
+.post .ly_main_container .bl_post_content .bl_chat_inner:nth-child(even) .talk {
+  background: #ffff7c;
+}
+.post .ly_main_container .bl_post_content .bl_chat .face {
+  flex: 0 0 70px;
 }
 .post .ly_main_container .bl_post_content .bl_chat .talk {
+  flex: 1 1 auto;
   padding: 1.5rem;
   border-radius: 20px;
 }
 .post .ly_main_container .bl_post_content .bl_chat .talk p {
   margin: 0;
+}
+.post .ly_main_container .bl_post_content .bl_chat .face img {
+  border-radius: 50%;
 }
 .post .ly_bottom_container {
   background: url(/images/bottom-bg-a881f58d85f8ad64b4e2.svg);
@@ -6799,4 +6810,4 @@ readers do not read off random characters that represent icons */
   font-weight: 400;
 }
 
-/*# sourceMappingURL=main-2eb53ff9b8cbb2811e5b.css.map*/
+/*# sourceMappingURL=main-292fbcb1f4cb76ef4221.css.map*/
