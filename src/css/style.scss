@@ -281,7 +281,7 @@ img {
         display: flex;
         margin: 15px 0;
         .face {
-          margin-right: 15px;
+          margin-right: 10px;
         }
         .talk {
           background: $color-light;
@@ -289,18 +289,31 @@ img {
       }
       &_inner:nth-child(even) {
         display: flex;
+        flex-direction: row-reverse;
         margin: 15px 0;
         .face {
-          margin-right: 15px;
+          margin-left: 10px;
+        }
+        .talk {
+          background: $color-lightning;
         }
       }
       //共通
+      .face {
+        //ベース幅を固定
+        flex: 0 0 70px;
+      }
       .talk {
+        //伸縮率と縮小率を「1 1」にして親要素に合わせて伸縮
+        flex: 1 1 auto;
         padding: 1.5rem;
         border-radius: 20px;
         p {
           margin: 0;
         }
+      }
+      .face img {
+        border-radius: 50%;
       }
     }
   }
