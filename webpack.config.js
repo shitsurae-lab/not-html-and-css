@@ -5,7 +5,6 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const { loader } = require('mini-css-extract-plugin');
 // const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const GoogleFontsPlugin = require('@beyonk/google-fonts-webpack-plugin');
-const { webpack } = require('webpack');
 
 module.exports = {
   //npx webpackのモード指定。デフォルトは'production'
