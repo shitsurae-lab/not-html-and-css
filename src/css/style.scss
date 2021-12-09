@@ -148,6 +148,48 @@ img {
   border-bottom: 1px solid #d8d8d8;
 }
 
+.ly_header_container {
+  @include mq(md) {
+    @include mainContainer($padding: 0 20px 0);
+  }
+}
+//ナビゲーション ul
+.header-nav {
+  display: flex;
+  flex-direction: column;
+  //add class(JS)
+  &.collapse {
+    display: none;
+  }
+  @include mq(md) {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
+
+.header-nav a {
+  display: block;
+  padding: 20px 30px;
+  border-top: 1px solid #d8d8d8;
+  color: #000;
+  text-decoration: none;
+
+  //ナビゲーションhover
+  &:hover {
+    background: $color-light-success;
+  }
+  @include mq(md) {
+    padding: 6px 20px 2px;
+    border-top: none;
+    border-bottom: 4px solid transparent;
+    background: none;
+    &:hover {
+      border-bottom: 4px solid $color-info;
+      background: none;
+    }
+  }
+}
 //パンくずリスト
 .ly_breadcrumb {
   display: none;
@@ -318,7 +360,43 @@ img {
     }
   }
   //ポストフッター
-  .bl_post_footer {
+  .bl_postFooter {
+    //見出し
+    h2 {
+      display: inline-block;
+      margin: 0;
+      padding: 10px 30px;
+      background: #000;
+      border-radius: 10px 10px 0 0;
+      font-family: 'Croissant One', cursive;
+      font-weight: 400;
+      font-size: 1.25rem;
+      color: #fff;
+    }
+    //囲み
+    &_profile {
+      display: flex;
+      padding: 1rem;
+      border: 1px solid #000;
+    }
+    //画像外側
+    &_photo {
+      flex: 0 0 100px;
+      margin-right: 1rem;
+    }
+    //画像
+    &_photo img {
+      border-radius: 50%;
+    }
+    //プロフィールエリア
+    &_text {
+      flex: 1 1 auto;
+    }
+    //プロフィール文
+    &_text p {
+      margin: 0;
+      line-height: 1.9;
+    }
   }
 }
 
@@ -338,5 +416,48 @@ img {
   padding: 60px 4%;
   @include mq(md) {
     @include mainContainer($padding: 60px 20px);
+  }
+}
+
+//ロゴ and ハンバーガー
+.sitetitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include mq(md) {
+    display: block;
+    padding-top: 30px;
+  }
+}
+//ロゴ: h1のデフォルトCSSをリセット
+.header-logo {
+  margin: 0;
+  padding-left: 15px;
+  font-size: 0;
+  line-height: 0;
+  @include mq(md) {
+    padding: 0;
+  }
+  & img {
+    width: 130px;
+  }
+}
+
+//ハンバーガーボタン
+.navbtn {
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-image: url(../images/nav-mobile-open.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+
+  //ハンバーガーボタン閉
+  &.close {
+    background-image: url(../images/nav-mobile-close.svg);
+  }
+  @include mq(md) {
+    display: none;
   }
 }
