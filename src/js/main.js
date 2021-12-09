@@ -6,6 +6,15 @@
 //import Default from './drawer.js';
 import './drawer.js';
 
+//jQueryの読み込み
+// import jQuery from 'jquery';
+//ドルマークに参照を代入(慣習的な $ を使うため)
+// const $ = jQuery;
+import './jquery-3.6.0.min.js';
+// not-text.js
+import './script.js';
+// import './original.js';
+
 /* *****
  *CSS
  ***** */
