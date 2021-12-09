@@ -34,6 +34,7 @@
   },
   "dependencies": {
     "@beyonk/google-fonts-webpack-plugin": "^1.7.0",
-    "@fortawesome/fontawesome-free": "^5.15.4"
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "jquery": "^3.6.0"
   }
 }
