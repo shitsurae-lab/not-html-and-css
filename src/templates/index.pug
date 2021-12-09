@@ -2,7 +2,48 @@ extends _header.pug
 block content
     header.ly_header
       .ly_header_container
-        h1 ロゴ
+        .sitetitle
+          h1.header-logo
+            a(href="/")
+              img(src="../images/header-logo.svg" alt='tankaku')
+          .navbtn ボタン
+        //END .bl_header
+
+        //- 変数を複数定義するとき「-」と「var」の間は一行開けて改行(タブも残さない)
+        -
+
+          var array = ['HOME', '最新の特集', '地域別に読む','連載一覧', 'インタビュー']
+
+          var nav = [
+            {
+              title: 'HOME',
+              url: '/'
+            },
+            {
+              title: '最新の特集',
+              url: '/new'
+            },
+            {
+              title: '地域別に読む',
+              url: '/local'
+            },
+            {
+              title: '連載一覧',
+              url: '/serialization'
+            },
+            {
+              title: 'インタビュー',
+              url: '/interview'
+            },
+          ]
+        nav
+          //- まずスマホのときのメニューをCSSで表示。OKであればHTMLにCSS(collapse display:none)を加えて非表示にする
+          ul.header-nav.collapse
+            each elm in nav
+              li: a(href=elm.url)
+                | #{elm.title}
+    // END .ly_header
+
     .ly_breadcrumb
       .ly_breadcrumb_container
         div Home &gt; パンくずリスト
@@ -19,7 +60,7 @@ block content
               | 桑山みなと
             span
               <i class="fas fa-map-marker-alt"></i>
-              | 桑山みなと
+              | サンフランシスコ
             span
               <i class="fas fa-clock"></i>
               | 2021.6.16
@@ -73,8 +114,16 @@ block content
           //END .bl_chat
 
         //END .bl_post_content
-        .bl_post_footer
-          p ポストフッター
+        footer.bl_postFooter
+          h2 <i class='fas fa-pen-fancy'>プロフィール</i>
+          .bl_postFooter_profile
+            .bl_postFooter_photo
+              img(src="../images/writer.jpg")
+            .bl_postFooter_text
+              p
+                strong 桑山みなと
+                | 大手出版社の編集者を経てライターとして独立。絵本、児童文学に詳しく、小学校の教員免許を持っているため、絵本作家や教育関係者へのインタビュー経験が多い。現在シアトルに長期滞在中で、Tansaku!では「アメリカ西海岸レポート」を連載している。
+            //END .bl_postFooter_inner
     .ly_bottom: .ly_bottom_container
       p ページ下部コンテンツ
     footer.ly_footer: .ly_footer_container
