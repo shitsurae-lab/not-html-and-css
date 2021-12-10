@@ -815,6 +815,29 @@ img {
     display: none;
   }
 }
+
+.bl_breadNav {
+  display: flex;
+}
+.bl_breadNav li {
+  font-size: 0.75rem;
+  color: #747474;
+}
+.bl_breadNav li::after {
+  padding: 0 5px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "";
+}
+.bl_breadNav li:last-child::after {
+  content: "";
+}
+.bl_breadNav li a {
+  color: #747474;
+}
+.bl_breadNav li a:hover {
+  opacity: 0.8;
+}
 /*!*******************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss ***!
   \*******************************************************************************************************************************************************************************************************************/
@@ -6939,4 +6962,4 @@ readers do not read off random characters that represent icons */
   font-weight: 400;
 }
 
-/*# sourceMappingURL=main-63677a554c0238dbe834.css.map*/
+/*# sourceMappingURL=main-2103551ab68c84be7d38.css.map*/
