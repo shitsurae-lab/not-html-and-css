@@ -844,6 +844,18 @@ img {
     padding: 60px 20px;
   }
 }
+.post .ly_footer_container .bl_footerLogo {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.post .ly_footer_container .bl_footerLogo img {
+  max-width: 160px;
+}
+.post .ly_footer_container .copyright {
+  text-align: center;
+  color: #d8d8d8;
+  font-size: 0.75rem;
+}
 
 .sitetitle {
   display: flex;
@@ -7036,4 +7048,4 @@ readers do not read off random characters that represent icons */
   font-weight: 400;
 }
 
-/*# sourceMappingURL=main-72445956df9861b8cd1b.css.map*/
+/*# sourceMappingURL=main-3264c14861bb1b2f994a.css.map*/
