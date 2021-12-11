@@ -42,11 +42,19 @@ block content
             each elm in nav
               li: a(href=elm.url)
                 | #{elm.title}
-    // END .ly_header
+    // END .ly_header(ヘッダー)
 
     .ly_breadcrumb
       .ly_breadcrumb_container
-        div Home &gt; パンくずリスト
+        //-連想配列の定義
+        include _array.pug
+
+        ul.bl_breadNav
+          //- ①ul ②each .. in ③liはタブの位置に注意
+          each bc_elm in arr_bread
+            li: a(href=bc_elm.url)
+              | #{bc_elm.title}
+    // END .ly_breadcrumb(パンくずリスト)
     main.ly_main
       .ly_main_container
         header.bl_post_header
