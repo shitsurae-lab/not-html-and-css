@@ -15,3 +15,5 @@ background-attachment: scroll, fixed または local;
 ## sass ダウングレード
 
 fontawesome で警告が出るため、1.32.13 へダウングレード
+
+## git checkout develop02
