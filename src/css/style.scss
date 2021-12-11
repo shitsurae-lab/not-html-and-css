@@ -461,3 +461,27 @@ img {
     display: none;
   }
 }
+
+//パンくずリスト
+.bl_breadNav {
+  display: flex;
+  li {
+    font-size: 0.75rem;
+    color: $color-wabi;
+    &::after {
+      padding: 0 5px;
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      content: '\f054';
+    }
+  }
+  li:last-child::after {
+    content: '';
+  }
+  li a {
+    color: $color-wabi;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
