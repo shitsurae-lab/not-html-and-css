@@ -349,6 +349,10 @@ html *,
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 400;
@@ -756,6 +760,76 @@ img {
     margin: 0 auto;
     padding: 60px 20px 0;
   }
+}
+.post .ly_bottom_container .bl_bannerUnit {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .post .ly_bottom_container .bl_bannerUnit {
+    flex-direction: row;
+  }
+}
+.post .ly_bottom_container .bl_banner {
+  margin-bottom: 20px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .post .ly_bottom_container .bl_banner {
+    margin: 0 10px;
+  }
+}
+.post .ly_bottom_container .bl_banner a {
+  display: block;
+}
+.post .ly_bottom_container .bl_banner a:hover {
+  opacity: 0.8;
+}
+.post .ly_bottom_container .followus {
+  margin-bottom: 15px;
+  font-family: "Croissant One", cursive;
+  font-weight: 400;
+  font-size: 1.875rem;
+  text-align: center;
+}
+.post .ly_bottom_container .bl_sns {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.post .ly_bottom_container .bl_sns li {
+  margin: 0 10px;
+}
+.post .ly_bottom_container .bl_sns li a {
+  display: block;
+  width: 70px;
+  height: 70px;
+  background-color: #73cbd6;
+  border-radius: 50%;
+  font-size: 30px;
+  line-height: 70px;
+  text-align: center;
+  color: #fff;
+}
+.post .ly_bottom_container .bl_sns li a:hover {
+  opacity: 0.8;
+}
+.post .ly_bottom_container .bl_gotop {
+  text-align: center;
+}
+.post .ly_bottom_container .bl_gotop a {
+  display: inline-block;
+  padding: 1rem 4rem;
+  background-color: #000;
+  border-radius: 20px 20px 0 0;
+  font-size: 1.25rem;
+  text-align: center;
+  color: #fff;
+  opacity: 0.6;
+}
+.post .ly_bottom_container .bl_gotop a:hover {
+  opacity: 0.8;
 }
 
 .post .ly_footer_container {
@@ -6962,4 +7036,4 @@ readers do not read off random characters that represent icons */
   font-weight: 400;
 }
 
-/*# sourceMappingURL=main-2103551ab68c84be7d38.css.map*/
+/*# sourceMappingURL=main-72445956df9861b8cd1b.css.map*/
