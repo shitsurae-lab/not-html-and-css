@@ -55,7 +55,7 @@ block content
             li: a(href=bc_elm.url)
               | #{bc_elm.title}
     // END .ly_breadcrumb(パンくずリスト)
-    main.ly_main
+    main.ly_main#top
       .ly_main_container
         header.bl_post_header
           h1 知らない街の「地元」の空気に触れたい!ファーマーズマーケットには情報がいっぱい
@@ -92,8 +92,8 @@ block content
 
           - var arr = ['お店の人に何でも質問する','調理販売しているフードスタンドは要チェック','たくさん購入したくなるけれど、食べ切れる量の果物や、お土産にできるジャムなどの加工品を選ぶ']
           ul.bl_list
-          each el in arr
-            li #{el}
+            each el in arr
+              li #{el}
             //- li お店の人に何でも質問する
             //- li 調理販売しているフードスタンドは要チェック
             //- li たくさん購入したくなるけれど、食べ切れる量の果物や、お土産にできるジャムなどの加工品を選ぶ
@@ -133,6 +133,27 @@ block content
                 | 大手出版社の編集者を経てライターとして独立。絵本、児童文学に詳しく、小学校の教員免許を持っているため、絵本作家や教育関係者へのインタビュー経験が多い。現在シアトルに長期滞在中で、Tansaku!では「アメリカ西海岸レポート」を連載している。
             //END .bl_postFooter_inner
     .ly_bottom: .ly_bottom_container
-      p ページ下部コンテンツ
+      //- 連想配列宣言(グローバル)
+      include _array.pug
+      .bl_bannerUnit
+        each elm in arr_banner
+          .bl_banner
+            a(href=elm.url): img(src=elm.image)
+
+            //- .bl_banner
+            //-   a(href='.banner-1'): img(src="../images/banner-1.png")
+            //- .bl_banner
+            //-   a(href='.banner-2'): img(src="../images/banner-2.png")
+      // END .bannerUnit
+      h2.followus Follow US!
+      include _array.pug
+      ul.bl_sns
+        each elm in arr_sns
+          li: a(href='elm.url')
+            | !{elm.awesome}
+      .bl_gotop
+        a(href="#top")
+          <i class='fas fa-chevron-up'></i>
+
     footer.ly_footer: .ly_footer_container
       p フッターコンテンツ
