@@ -25,3 +25,7 @@ fontawesome で警告が出るため、1.32.13 へダウングレード
 ## git checkout master
 
 コミット 01
+
+## git checkout master
+
+コミット 02
