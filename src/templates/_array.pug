@@ -1,17 +1,44 @@
 -
 
     //- パンくずリスト
-    var arr_bread = [
-      {
-        title: 'Home',
-        url: '/',
-      },
-      {
-        title: 'アメリカ西海岸レポート',
-        url: '/report',
-      },
-      {
-        title: '知らない街の「地元」の空気に触れたい!ファーマーズマーケットには情報がいっぱい',
-        url: '/info/report',
-      },
-    ];
+  var arr_bread = [
+    {
+      title: 'Home',
+      url: '/',
+    },
+    {
+      title: 'アメリカ西海岸レポート',
+      url: '/report',
+    },
+    {
+      title: '知らない街の「地元」の空気に触れたい!ファーマーズマーケットには情報がいっぱい',
+      url: '/info/report',
+    },
+  ];
+
+  var arr_banner =[
+    {
+      url: '/banner-1',
+      image: '../images/banner-1.png'
+    },
+    {
+      url: '/banner-2',
+      image: '../images/banner-2.png'
+    },
+  ];
+
+  //配列の中身をHTMLとして出力する = 呼び出すときに !{elm.awesome}のように記述する
+  var arr_sns = [
+    {
+      url: '/twitter',
+      awesome: '<i class="fab fa-twitter"></i>'
+    },
+    {
+      url: '/facebook',
+      awesome: '<i class="fab fa-facebook-f"></i>'
+    },
+    {
+      url: '/instagram',
+      awesome: '<i class="fab fa-instagram"></i>'
+    },
+  ];
