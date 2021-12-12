@@ -492,6 +492,19 @@ img {
   @include mq(md) {
     @include mainContainer($padding: 60px 20px);
   }
+
+  .bl_footerLogo {
+    margin-bottom: 30px;
+    text-align: center;
+    img {
+      max-width: 160px;
+    }
+  }
+  .copyright {
+    text-align: center;
+    color: #d8d8d8;
+    font-size: 0.75rem;
+  }
 }
 
 //ロゴ and ハンバーガー
