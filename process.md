@@ -33,3 +33,9 @@ fontawesome で警告が出るため、1.32.13 へダウングレード
 ## git checkout master
 
 コミット 02
+
+## テンプレート拡張について(多分こうではないか???)
+
+- extends hoge.pug
+- block content
+  はインデントなしで配置。block content のしたの行はインデントすること
