@@ -2,7 +2,7 @@ extends _meta.pug
 block content
 block titles
   - var title = "レポート"
-  body.post
+  body
     header.ly_header
       .ly_header_container
         .sitetitle
@@ -157,7 +157,7 @@ block titles
       .bl_gotop
         a(href="#top")
           <i class='fas fa-chevron-up'></i>
-
+    //END .ly_bottom(ページ下部)
     footer.ly_footer
       .ly_footer_container
         .bl_footerLogo
@@ -177,3 +177,4 @@ block titles
               a(href=elm.url)
                 |#{elm.title}
         p.copyright &copy;tansaku! All  rights reserved
+    //END .ly_footer(フッター)
