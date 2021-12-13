@@ -500,6 +500,61 @@ img {
       max-width: 160px;
     }
   }
+
+  /* フッターナビ(TOP) */
+  .bl_footerNav_t {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 0;
+    list-style: none;
+    //* PC
+    @include mq(md) {
+      flex-direction: row;
+      justify-content: center;
+    }
+    li {
+      margin: 0 0 2rem;
+      font-size: 0.875rem; //14px(16) 12.25px(14)
+      @include mq(md) {
+        //* PC
+        margin: 0 1rem;
+      }
+      a {
+        color: $color-light-gray;
+        text-decoration: none;
+        &:hover {
+          color: $color-primary;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  /*  フッターナビ(Bottom) */
+  .bl_footerNav_b {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 20px;
+    padding: 0;
+    list-style: none;
+    //項目
+    li {
+      margin: 0 0.75rem 3px;
+      font-size: 0.75rem;
+      a {
+        color: $color-light-gray;
+        text-decoration: none;
+        &:hover {
+          color: $color-primary;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  /* コピーライト */
   .copyright {
     text-align: center;
     color: #d8d8d8;
@@ -507,7 +562,7 @@ img {
   }
 }
 
-//ロゴ and ハンバーガー
+/* ロゴ and ハンバーガー */
 .sitetitle {
   display: flex;
   justify-content: space-between;
