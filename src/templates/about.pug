@@ -1,18 +1,19 @@
 //- テンプレート拡張
-extends _header.pug
+extends _meta.pug
 block content
 //- 変数でtitle書き換え
 block titles
   - var title = 'Hello About!'
-  header.p_header
-    .p_header_inner
-      h1.p_logo Logo
-      button.drawer_btn メニュー
+  body
+    header.p_header
+      .p_header_inner
+        h1.p_logo Logo
+        button.drawer_btn メニュー
     include _nav.pug
-  main: .p_main_container
-    p 行頭にfontawesome
-    p これはダミーテキストです。これはダミーテキストです。これはダミーテキストです。これはダミーテキストです。developにpushしたよ
-    ul
-        li
-          span <i class="fas fa-thumbs-up"></i>
-          | Post Footer
+    main: .p_main_container
+      p 行頭にfontawesome
+      p これはダミーテキストです。これはダミーテキストです。これはダミーテキストです。これはダミーテキストです。developにpushしたよ
+      ul
+          li
+            span <i class="fas fa-thumbs-up"></i>
+            | Post Footer
