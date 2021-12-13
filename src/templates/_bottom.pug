@@ -1,0 +1,43 @@
+.ly_bottom: .ly_bottom_container
+  //- 連想配列宣言(グローバル)
+  include _array.pug
+  .bl_bannerUnit
+    each elm in arr_banner
+      .bl_banner
+        a(href=elm.url): img(src=elm.image)
+
+        //- .bl_banner
+        //-   a(href='.banner-1'): img(src="../images/banner-1.png")
+        //- .bl_banner
+        //-   a(href='.banner-2'): img(src="../images/banner-2.png")
+  // END .bannerUnit
+  h2.followus Follow US!
+  include _array.pug
+  ul.bl_sns
+    each elm in arr_sns
+      li: a(href='elm.url')
+        | !{elm.awesome}
+  .bl_gotop
+    a(href="#top")
+      <i class='fas fa-chevron-up'></i>
+//END .ly_bottom(ページ下部)
+footer.ly_footer
+  .ly_footer_container
+    .bl_footerLogo
+      a(href="/")
+        img(src="../images/footer-logo.svg" alt="Tansaku")
+    include _array.pug
+    ul.bl_footerNav_t
+      each elm in arr_footer_t
+        li
+          a(href=elm.url)
+            | #{elm.title}
+
+    include _array.pug
+    ul.bl_footerNav_b
+      each elm in arr_footer_b
+        li
+          a(href=elm.url)
+            |#{elm.title}
+    p.copyright &copy;tansaku! All  rights reserved
+//END .ly_footer(フッター)

@@ -1,0 +1,57 @@
+block titles
+  - var title = 'Not HTML and CSS'
+doctype html
+html(lang="ja")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    //- <script  src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"></script>
+    title #{title}
+    block titles
+      - var title = 'トップ';
+  body
+    header.ly_header
+      .ly_header_container
+        .sitetitle
+          h1.header-logo
+            a(href="/")
+              img(src="../images/header-logo.svg" alt='tankaku')
+          .navbtn
+        //END .bl_header
+
+        //- 変数を複数定義するとき「-」と「var」の間は一行開けて改行(タブも残さない)
+        -
+
+          var array = ['HOME', '最新の特集', '地域別に読む','連載一覧', 'インタビュー']
+
+          var nav = [
+            {
+              title: 'HOME',
+              url: '/'
+            },
+            {
+              title: '最新の特集',
+              url: '/new'
+            },
+            {
+              title: '地域別に読む',
+              url: '/local'
+            },
+            {
+              title: '連載一覧',
+              url: '/serialization'
+            },
+            {
+              title: 'インタビュー',
+              url: '/interview'
+            },
+          ]
+        nav
+          //- まずスマホのときのメニューをCSSで表示。OKであればHTMLにCSS(collapse display:none)を加えて非表示にする
+          ul.header-nav.collapse
+            each elm in nav
+              li: a(href=elm.url)
+                | #{elm.title}
+    // END .ly_header(ヘッダー)
+block pageContent
