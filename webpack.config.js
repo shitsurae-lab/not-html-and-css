@@ -148,8 +148,8 @@ module.exports = {
       //srcフォルダ内にHTMLファイルの雛形を作り、ここから読ませる + src配下のtemplatesフォルダに入れる
       // template: './src/templates/index.html',
       //srcフォルダ内をpugファイルに変更
-      template: './src/templates/index.pug',
-      filename: 'index.html',
+      template: './src/templates/post.pug',
+      filename: 'post.html',
     }),
     new HtmlWebpackPlugin({
       template: './src/templates/about.pug',
