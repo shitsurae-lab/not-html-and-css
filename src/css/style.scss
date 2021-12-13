@@ -148,11 +148,55 @@ img {
   border-bottom: 1px solid #d8d8d8;
 }
 
+//ヘッダー: _container内で要素を配置する
 .ly_header_container {
   @include mq(md) {
     @include mainContainer($padding: 0 20px 0);
   }
 }
+/* ロゴ and ハンバーガー */
+.sitetitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include mq(md) {
+    display: block;
+    padding-top: 30px;
+  }
+}
+//ロゴ: h1のデフォルトCSSをリセット
+.header-logo {
+  margin: 0;
+  padding-left: 15px;
+  font-size: 0;
+  line-height: 0;
+  @include mq(md) {
+    padding: 0;
+  }
+  & img {
+    width: 130px;
+  }
+}
+
+//ハンバーガーボタン
+.navbtn {
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-image: url(../images/nav-mobile-open.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+
+  //ハンバーガーボタン閉
+  &.close {
+    background-image: url(../images/nav-mobile-close.svg);
+  }
+  @include mq(md) {
+    display: none;
+  }
+}
+
 //ナビゲーション ul
 .header-nav {
   display: flex;
@@ -190,7 +234,7 @@ img {
     }
   }
 }
-//パンくずリスト
+//パンくずリスト(エリア)
 .ly_breadcrumb {
   display: none;
   @include mq(md) {
@@ -204,8 +248,32 @@ img {
   }
 }
 
+//パンくずリスト
+.bl_breadNav {
+  display: flex;
+  li {
+    font-size: 0.75rem;
+    color: $color-wabi;
+    &::after {
+      padding: 0 5px;
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      content: '\f054';
+    }
+  }
+  li:last-child::after {
+    content: '';
+  }
+  li a {
+    color: $color-wabi;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
 //メインコンテナ
-.post .ly_main_container {
+.ly_main_container {
   padding: 80px 4% 0;
   background-image: url('../images/post-bg.svg');
   background-repeat: repeat-x;
@@ -401,7 +469,7 @@ img {
 }
 
 //ページ下部
-.post .ly_bottom_container {
+.ly_bottom_container {
   background: url('../images/bottom-bg.svg');
   padding: 60px 4% 0;
   @include mq(md) {
@@ -485,7 +553,7 @@ img {
 }
 
 //フッター
-.post .ly_footer_container {
+.ly_footer_container {
   color: $color-primary;
   background: $color-secondary;
   padding: 60px 4%;
@@ -559,72 +627,5 @@ img {
     text-align: center;
     color: #d8d8d8;
     font-size: 0.75rem;
-  }
-}
-
-/* ロゴ and ハンバーガー */
-.sitetitle {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  @include mq(md) {
-    display: block;
-    padding-top: 30px;
-  }
-}
-//ロゴ: h1のデフォルトCSSをリセット
-.header-logo {
-  margin: 0;
-  padding-left: 15px;
-  font-size: 0;
-  line-height: 0;
-  @include mq(md) {
-    padding: 0;
-  }
-  & img {
-    width: 130px;
-  }
-}
-
-//ハンバーガーボタン
-.navbtn {
-  display: block;
-  width: 60px;
-  height: 60px;
-  background-image: url(../images/nav-mobile-open.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  cursor: pointer;
-
-  //ハンバーガーボタン閉
-  &.close {
-    background-image: url(../images/nav-mobile-close.svg);
-  }
-  @include mq(md) {
-    display: none;
-  }
-}
-
-//パンくずリスト
-.bl_breadNav {
-  display: flex;
-  li {
-    font-size: 0.75rem;
-    color: $color-wabi;
-    &::after {
-      padding: 0 5px;
-      font-family: 'Font Awesome 5 Free';
-      font-weight: 900;
-      content: '\f054';
-    }
-  }
-  li:last-child::after {
-    content: '';
-  }
-  li a {
-    color: $color-wabi;
-    &:hover {
-      opacity: 0.8;
-    }
   }
 }
