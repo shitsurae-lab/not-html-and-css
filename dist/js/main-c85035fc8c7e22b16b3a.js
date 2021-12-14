@@ -15447,14 +15447,18 @@ const nav = document.querySelector('.drawer_nav');
 //   querySelector('.drawer_btn');
 // }
 
-btn.addEventListener('click', () => {
-  nav.classList.toggle('open-menu');
-  if (btn.innerHTML === 'メニュー') {
-    btn.innerHTML = '閉じる';
-  } else {
-    btn.innerHTML = 'メニュー';
-  }
-});
+const href = location.href;
+
+if (href === 'http://localhost:8080/about.html') {
+  btn.addEventListener('click', () => {
+    nav.classList.toggle('open-menu');
+    if (btn.innerHTML === 'メニュー') {
+      btn.innerHTML = '閉じる';
+    } else {
+      btn.innerHTML = 'メニュー';
+    }
+  });
+}
 
 
 /***/ }),
@@ -15465,10 +15469,15 @@ btn.addEventListener('click', () => {
   \**************************/
 /***/ (() => {
 
-alert('Hello World!');
-
-const url = location.url;
-console.log(url);
+const url = location.href;
+const target = document.querySelector('body');
+if (url === 'http://localhost:8080/about.html') {
+  target.classList.add('sample');
+} else if (url === 'http://localhost:8080/post.html') {
+  target.classList.add('post');
+} else {
+  target.classList.add('home');
+}
 
 
 /***/ }),
@@ -15654,4 +15663,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=main-f87d16a1b027dcdca273.js.map
+//# sourceMappingURL=main-c85035fc8c7e22b16b3a.js.map
