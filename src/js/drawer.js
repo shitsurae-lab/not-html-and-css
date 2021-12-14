@@ -8,11 +8,15 @@ const nav = document.querySelector('.drawer_nav');
 //   querySelector('.drawer_btn');
 // }
 
-btn.addEventListener('click', () => {
-  nav.classList.toggle('open-menu');
-  if (btn.innerHTML === 'メニュー') {
-    btn.innerHTML = '閉じる';
-  } else {
-    btn.innerHTML = 'メニュー';
-  }
-});
+const href = location.href;
+
+if (href === 'http://localhost:8080/about.html') {
+  btn.addEventListener('click', () => {
+    nav.classList.toggle('open-menu');
+    if (btn.innerHTML === 'メニュー') {
+      btn.innerHTML = '閉じる';
+    } else {
+      btn.innerHTML = 'メニュー';
+    }
+  });
+}
