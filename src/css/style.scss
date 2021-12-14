@@ -226,7 +226,7 @@
   display: none;
   @include mq(md) {
     display: block;
-    background: #efefef;
+    background: $color-pale-gray;
   }
   &_container {
     @include mq(md) {
@@ -259,8 +259,8 @@
   }
 }
 
-//メインコンテナ
-.ly_main_container {
+/* メインコンテナー(投稿ページ) */
+.post .ly_main_container {
   padding: 80px 4% 0;
   background-image: url('../images/post-bg.svg');
   background-repeat: repeat-x;
@@ -451,6 +451,28 @@
     &_text p {
       margin: 0;
       line-height: 1.9;
+    }
+  }
+}
+
+/* メインコンテナー(トップページ) */
+.home {
+  .ly_main {
+    background: url('../images/home-bg.svg');
+  }
+  .ly_main_container {
+    padding: 60px 4%;
+    @include mq(md) {
+      @include centerd($p-tb: 60px, $p-lr: 20px);
+    }
+  }
+  .ly_news {
+    background: $color-pale-gray;
+  }
+  .ly_news_container {
+    padding: 60px 4%;
+    @include mq(md) {
+      @include centerd($mw: 768px, $p-tb: 60px);
     }
   }
 }
