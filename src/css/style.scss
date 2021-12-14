@@ -39,19 +39,6 @@
   }
 }
 
-html {
-  font-size: 14px;
-  @include mq(md) {
-    font-size: 16px;
-  }
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  vertical-align: bottom;
-}
-
 /*  webcreatorbox
 * cf) https://bit.ly/3I2ttUm
 */
@@ -141,7 +128,7 @@ img {
  Non HTML & CSS Chapter2
 * ************************
 */
-//ヘッダー: 親要素に背景画像を設置
+//ヘッダー: 親要素に背景画像を設置(共通)
 .ly_header {
   background-image: url('../images/haeder-topline.svg');
   background-repeat: repeat-x;
@@ -178,7 +165,7 @@ img {
   }
 }
 
-//ハンバーガーボタン
+//ハンバーガーボタン(共通)
 .navbtn {
   display: block;
   width: 60px;
@@ -197,7 +184,7 @@ img {
   }
 }
 
-//ナビゲーション ul
+//ナビゲーション ul(共通)
 .header-nav {
   display: flex;
   flex-direction: column;
@@ -468,7 +455,7 @@ img {
   }
 }
 
-//ページ下部
+//ページ下部(共通)
 .ly_bottom_container {
   background: url('../images/bottom-bg.svg');
   padding: 60px 4% 0;
@@ -552,7 +539,7 @@ img {
   }
 }
 
-//フッター
+//フッター(共通)
 .ly_footer_container {
   color: $color-primary;
   background: $color-secondary;
