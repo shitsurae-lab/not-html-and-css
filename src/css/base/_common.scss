@@ -7,8 +7,28 @@ html *,
   box-sizing: border-box;
 }
 
+//Set Map
+$breakpoint: (
+  sm: 'screen and (min-width: 576px)',
+  md: 'screen and (min-width: 768px)',
+  lg: 'screen and (min-width: 992px)',
+  xl: 'screen and (min-width: 1200px)',
+  xxl: 'screen and (min-width: 1400px)',
+); //mapの')'の後ろにセミコロン
+
+//Set mixin
+@mixin mq($bp) {
+  @media #{map-get($breakpoint,$bp)} {
+    @content; //@contentの後ろにセミコロン
+  }
+}
+
 html {
   scroll-behavior: smooth;
+  font-size: 14px;
+  @include mq(md) {
+    font-size: 16px;
+  }
 }
 
 //Google fonts(Noto Sans JP)
@@ -37,20 +57,10 @@ strong {
   font-weight: 700;
 }
 
-//Set Map
-$breakpoint: (
-  sm: 'screen and (min-width: 576px)',
-  md: 'screen and (min-width: 768px)',
-  lg: 'screen and (min-width: 992px)',
-  xl: 'screen and (min-width: 1200px)',
-  xxl: 'screen and (min-width: 1400px)',
-); //mapの')'の後ろにセミコロン
-
-//Set mixin
-@mixin mq($bp) {
-  @media #{map-get($breakpoint,$bp)} {
-    @content; //@contentの後ろにセミコロン
-  }
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
 }
 
 //コンテナ幅を中央に配置
@@ -58,5 +68,12 @@ $breakpoint: (
   max-width: $mw;
   margin: $margin;
   padding: $padding;
+  @content;
+}
+
+@mixin centerd($mw: 1024px, $p-tb: 0, $p-lr: 20px) {
+  max-width: $mw;
+  padding: $p-tb $p-lr;
+  margin: 0 auto;
   @content;
 }
