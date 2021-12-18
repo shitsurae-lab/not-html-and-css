@@ -2,10 +2,59 @@ extends _header.pug
 block pageContent
     .ly_hero
         .ly_hero_container
-            h1 ヒーロー
+            .bl_hero
+                .bl_hero_image
+                    img(src='../images/home-mainphoto.jpg')
+                .bl_hero_logo
+                    img(src='../images/home-logo.svg')
     .ly_main
         .ly_main_container
-            p あるところは岨づたいに行く崖の道であり、あるところは数十間の深さに臨む木曾川の岸であり、あるところは山の尾をめぐる谷の入り口である。一筋の街道はこの深い森林地帯を貫いていた。東ざかいの桜沢から、西の十曲峠まで、木曾十一宿はこの街道に添うて、二十二里余にわたる長い谿谷の間に散在していた。道路の位置も幾たびか改まったもので、古道はいつのまにか深い山間に埋もれた。名高い桟も、蔦のかずらを頼みにしたような危い場処ではなくなって、徳川時代の末にはすでに渡ることのできる橋であった。新規に新規にとできた道はだんだん谷の下の方の位置へと降って来た。道の狭いところには、木を伐って並べ、藤づるでからめ、それで街道の狭いのを補った。
+            .bl_lead
+                p 行ったことのない街を歩いたり、知らなかった技術を学んだり、食べたことのないものを見つけたり。好奇心いっぱいの探索を。
+            // 最新記事
+            h2 Latest
+
+            //- 配列読み込み
+            include _array.pug
+
+            .bl_latest
+                each elm in arr_latest
+                    .bl_latest_item
+                        .bl_latest_image
+                            a(href=elm.url)
+                                img(src=elm.image)
+                        .bl_latest_text
+                            h3: a(href=elm.url)
+                                | #{elm.title}
+                            .bl_latest_tag
+                                span: a(href='')
+                                    | #{elm.tag}
+                                span: a(href='')
+                                    | #{elm.tag02}
+                            .bl_latest_info
+                                span #{elm.info}
+            // /最新記事
+
+            // 人気記事
+            h2 Popular
+
+            //- 配列読み込み
+            include _array.pug
+
+            .bl_media
+                each elm in arr_media
+                    .bl_media_item
+                        .bl_media_image
+                            img(src=elm.image)
+                        .bl_media_text
+                            h3 #{elm.title}
+                            p #{elm.desc}
+                            .bl_info
+                                span #{elm.info}
+
+
+
+            // /人気記事
     .ly_news
         .ly_news_container
             p ニュース項目
