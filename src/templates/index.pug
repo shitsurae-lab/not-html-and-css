@@ -45,17 +45,27 @@ block pageContent
                 each elm in arr_media
                     .bl_media_item
                         .bl_media_image
-                            img(src=elm.image)
+                            a(href='#')
+                                img(src=elm.image)
                         .bl_media_text
-                            h3 #{elm.title}
+                            h3
+                                a(href='#')
+                                 | #{elm.title}
                             p #{elm.desc}
                             .bl_info
                                 span #{elm.info}
-
-
-
             // /人気記事
     .ly_news
         .ly_news_container
-            p ニュース項目
+            h2 News
+            //- 配列読み込み
+            include _array.pug
+            .bl_news
+                dl
+                    each elm in arr_news
+                        dt #{elm.date}
+                        dd #{elm.desc}
+                            a(href="#")
+                             | !{elm.awesome}
+                             | #{elm.more}
     include _bottom.pug
