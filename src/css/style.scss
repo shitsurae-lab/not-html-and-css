@@ -535,35 +535,37 @@
     @include mq(md) {
       @include centered($p-tb: 60px, $p-lr: 20px);
     }
-  }
-  //リード文
-  .bl_lead {
-    @include centered($mw: 600px, $m-b: 60px);
-    padding: 0;
-    text-align: center;
-    p {
-      margin: 0;
-      font-size: 1.25rem;
-      line-height: 2;
+
+    //リード文
+    .bl_lead {
+      @include centered($mw: 600px, $m-b: 60px);
+      padding: 0;
+      text-align: center;
+      p {
+        margin: 0;
+        font-size: 1.25rem;
+        line-height: 2;
+      }
+    }
+
+    //見出し(スタンプデザイン)
+    h2 {
+      //display: grid;とplace-items: center;の2行で上下中央寄せ
+      display: grid;
+      place-items: center;
+      margin: 0 auto 30px;
+      width: 130px;
+      height: 130px;
+      background: url(../images/home-titleshape.svg) no-repeat;
+      background-size: 130px 130px;
+      color: #fff;
+      font-family: 'Croissant One', cursive;
+      font-weight: 400;
+      font-size: 20px;
     }
   }
 
-  //見出し(スタンプデザイン)
-  h2 {
-    //display: grid;とplace-items: center;の2行で上下中央寄せ
-    display: grid;
-    place-items: center;
-    margin: 0 auto 30px;
-    width: 130px;
-    height: 130px;
-    background: url(../images/home-titleshape.svg) no-repeat;
-    background-size: 130px 130px;
-    color: #fff;
-    font-family: 'Croissant One', cursive;
-    font-weight: 400;
-    font-size: 20px;
-  }
-
+  /* 最近の投稿 */
   .bl_latest {
     margin: 0 0 auto;
     display: grid;
@@ -578,7 +580,7 @@
     }
   }
 
-  //カード型レイアウト - item(wrap)
+  //カード型レイアウト wrap - 最近の投稿
   .bl_latest_item {
     border: 1px solid $color-light-gray;
     background: $color-primary;
@@ -587,7 +589,7 @@
       background: none;
     }
   }
-  //カード型レイアウト - image(画像部分)
+  //カード型レイアウト 画像 - 最近の投稿
   .bl_latest_image {
     img {
       margin: 0 0 10px;
@@ -596,7 +598,7 @@
       }
     }
   }
-  //カード型レイアウト - text(テキスト)
+  //カード型レイアウト テキスト - 最近の投稿
   .bl_latest_text {
     margin-bottom: 10px;
     padding: 0 10px;
@@ -604,7 +606,7 @@
       padding: 0;
     }
   }
-  //カード型レイアウト - h3(見出し)
+  //カード型レイアウト 見出し - 最近の投稿
   .bl_latest_text h3 {
     margin: 0 0 10px;
     font-size: 1rem;
@@ -617,7 +619,7 @@
       }
     }
   }
-  //タグ
+  //タグ - 最近の投稿
   .bl_latest_tag {
     margin-bottom: 1rem;
     span {
@@ -633,18 +635,74 @@
     }
   }
 
-  //info
-  .bl_latest_info {
+  //[共通] info(ロケーション)
+  .bl_info {
     display: flex;
     font-size: 0.75rem;
   }
-  .bl_latest_info span::before {
+  .bl_info span::before {
     padding-right: 5px;
     font-family: 'Font Awesome 5 free';
     font-weight: 900;
     color: $color-info;
     content: '\f3c5';
   }
+
+  /* メディアオブジェクト */
+  //メディアオブジェクト(wrapper)
+  .bl_media {
+    margin: 0 0 60px;
+    border-top: 1px solid $color-light-gray;
+
+    a {
+      display: block;
+      color: $color-secondary;
+      text-decoration: none;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+  //メディアオブジェクト(item)
+  .bl_media_item {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px solid $color-light-gray;
+  }
+  //メディアオブジェクト(画像)
+  .bl_media_image {
+    flex: 0 0 30%;
+    margin-right: 15px;
+    position: relative;
+  }
+  //メディアオブジェクト(テキスト)
+  .bl_media_text {
+    flex: 1 1 auto;
+    //テキスト内見出し
+    h3 {
+      margin: 0 0 auto;
+      font-size: 1rem;
+      line-height: 1.5;
+      //*pc
+      @include mq(md) {
+        font-size: 1.25rem;
+      }
+    }
+    //テキスト内本文
+    p {
+      margin: 0 0 10px;
+      display: none;
+      //*PC
+      @include mq(md) {
+        display: block;
+        font-size: 0.875rem;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  /* ニュース概要 */
   .ly_news {
     background: $color-pale-gray;
   }
@@ -653,5 +711,10 @@
     @include mq(md) {
       @include centered($mw: 768px, $p-tb: 60px);
     }
+  }
+
+  .ly_news_container h2 {
+    margin: 0 0 30px;
+    font-family: 'Croissant One', cursive;
   }
 }
