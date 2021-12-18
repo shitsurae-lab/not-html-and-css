@@ -111,7 +111,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.pug/,
+        test: /\.pug$/,
         use: [
           {
             loader: 'html-loader',
@@ -170,6 +170,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/templates/sample02.pug',
       filename: 'sample02.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/templates/sidebar-post.pug',
+      filename: 'sidebar-post.html',
     }),
 
     new CleanWebpackPlugin(),
