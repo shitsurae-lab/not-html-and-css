@@ -191,6 +191,10 @@
   }
   //ポストコンテンツ
   .bl_post_content {
+    margin: 0 0 60px;
+    @include mq(md) {
+      @include centered($mw: 600px, $p-lr: 0, $m-b: 60px);
+    }
     h2 {
       margin: 60px 0 30px;
       padding: 1rem 0;
@@ -296,6 +300,10 @@
   }
   //ポストフッター
   .bl_postFooter {
+    margin: 0 0 60px;
+    @include mq(md) {
+      @include centered($mw: 600px, $p-lr: 0, $m-b: 60px);
+    }
     //見出し
     h2 {
       display: inline-block;
