@@ -1,0 +1,39 @@
+@use '../base' as *;
+/*
+** sample.pug
+*/
+.p_header__background {
+  // padding-top: 66%;
+  height: 66vh;
+  background-image: url('../images/mainvisual.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.p_header__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.p_nav__list--00 {
+  display: flex;
+  list-style-type: none;
+  a {
+    color: $color-primary;
+  }
+}
+
+.logo {
+  flex: 0 1 auto; //default
+  margin: 0;
+}
+
+.wrapper {
+  padding: 0 4%;
+  @include mq(md) {
+    padding: 0 20px;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+}
