@@ -61,8 +61,8 @@ block pageContent
             //- 配列読み込み
             include _array.pug
             .bl_news
-                dl
-                    each elm in arr_news
+                each elm in arr_news
+                    dl
                         dt #{elm.date}
                         dd #{elm.desc}
                             a(href="#")
