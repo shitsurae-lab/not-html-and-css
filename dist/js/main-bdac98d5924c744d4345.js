@@ -15476,6 +15476,8 @@ if (url === 'http://localhost:8080/about.html') {
   target.classList.add('sample');
 } else if (url === 'http://localhost:8080/post.html') {
   target.classList.add('post');
+} else if (url === 'http://localhost:8080/sidebar-post.html') {
+  target.classList.add('sidebar-post');
 } else {
   target.classList.add('home');
 }
@@ -15669,4 +15671,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=main-1160f48ee407245a0f3c.js.map
+//# sourceMappingURL=main-bdac98d5924c744d4345.js.map
