@@ -455,29 +455,7 @@
   }
 }
 
-/* メインコンテナー(トップページ) */
-.home {
-  .ly_main {
-    background: url('../images/home-bg.svg');
-  }
-  .ly_main_container {
-    padding: 60px 4%;
-    @include mq(md) {
-      @include centerd($p-tb: 60px, $p-lr: 20px);
-    }
-  }
-  .ly_news {
-    background: $color-pale-gray;
-  }
-  .ly_news_container {
-    padding: 60px 4%;
-    @include mq(md) {
-      @include centerd($mw: 768px, $p-tb: 60px);
-    }
-  }
-}
-
-//ページ下部(共通)
+/* [共通] ページ下部 */
 .ly_bottom_container {
   background: url('../images/bottom-bg.svg');
   padding: 60px 4% 0;
@@ -561,7 +539,7 @@
   }
 }
 
-//フッター(共通)
+/* [共通] フッター */
 .ly_footer_container {
   color: $color-primary;
   background: $color-secondary;
@@ -578,7 +556,7 @@
     }
   }
 
-  /* フッターナビ(TOP) */
+  /* [共通] フッターナビ(TOP) */
   .bl_footerNav_t {
     display: flex;
     flex-direction: column;
@@ -609,7 +587,7 @@
     }
   }
 
-  /*  フッターナビ(Bottom) */
+  /* [共通] フッターナビ(Bottom) */
   .bl_footerNav_b {
     display: flex;
     justify-content: center;
@@ -631,10 +609,161 @@
     }
   }
 
-  /* コピーライト */
+  /* [共通] コピーライト */
   .copyright {
     text-align: center;
     color: #d8d8d8;
     font-size: 0.75rem;
+  }
+}
+
+/* メインコンテナー(トップページ) */
+.home {
+  //ヒーロー
+  .bl_hero {
+    position: relative;
+    //ロゴ中央寄せ
+    &_logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-130px, -53px);
+      width: 260px;
+      @include mq(md) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-200px, -82px);
+        width: 400px;
+      }
+    }
+  }
+  //メインコンテンツ(外側)
+  .ly_main {
+    background: url('../images/home-bg.svg');
+  }
+  .ly_main_container {
+    padding: 60px 4%;
+    @include mq(md) {
+      @include centered($p-tb: 60px, $p-lr: 20px);
+    }
+  }
+  //リード文
+  .bl_lead {
+    @include centered($mw: 600px, $m-b: 60px);
+    padding: 0;
+    text-align: center;
+    p {
+      margin: 0;
+      font-size: 1.25rem;
+      line-height: 2;
+    }
+  }
+
+  //見出し(スタンプデザイン)
+  h2 {
+    //display: grid;とplace-items: center;の2行で上下中央寄せ
+    display: grid;
+    place-items: center;
+    margin: 0 auto 30px;
+    width: 130px;
+    height: 130px;
+    background: url(../images/home-titleshape.svg) no-repeat;
+    background-size: 130px 130px;
+    color: #fff;
+    font-family: 'Croissant One', cursive;
+    font-weight: 400;
+    font-size: 20px;
+  }
+
+  .bl_latest {
+    margin: 0 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    column-gap: 10px;
+    row-gap: 30px;
+
+    @include mq(md) {
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 20px;
+    }
+  }
+
+  //カード型レイアウト - item(wrap)
+  .bl_latest_item {
+    border: 1px solid $color-light-gray;
+    background: $color-primary;
+    @include mq(md) {
+      border: none;
+      background: none;
+    }
+  }
+  //カード型レイアウト - image(画像部分)
+  .bl_latest_image {
+    img {
+      margin: 0 0 10px;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+  //カード型レイアウト - text(テキスト)
+  .bl_latest_text {
+    margin-bottom: 10px;
+    padding: 0 10px;
+    @include mq(md) {
+      padding: 0;
+    }
+  }
+  //カード型レイアウト - h3(見出し)
+  .bl_latest_text h3 {
+    margin: 0 0 10px;
+    font-size: 1rem;
+    line-height: 1.5;
+    a {
+      color: $color-secondary;
+      text-decoration: none;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+  //タグ
+  .bl_latest_tag {
+    margin-bottom: 1rem;
+    span {
+      margin: 0 3px 3px 0;
+      padding: 2px 10px;
+      border: 1px solid $color-info;
+      border-radius: 100px;
+      font-size: 0.75rem;
+    }
+    span a {
+      color: $color-info;
+      text-decoration: none;
+    }
+  }
+
+  //info
+  .bl_latest_info {
+    display: flex;
+    font-size: 0.75rem;
+  }
+  .bl_latest_info span::before {
+    padding-right: 5px;
+    font-family: 'Font Awesome 5 free';
+    font-weight: 900;
+    color: $color-info;
+    content: '\f3c5';
+  }
+  .ly_news {
+    background: $color-pale-gray;
+  }
+  .ly_news_container {
+    padding: 60px 4%;
+    @include mq(md) {
+      @include centered($mw: 768px, $p-tb: 60px);
+    }
   }
 }
