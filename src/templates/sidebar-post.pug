@@ -1,0 +1,37 @@
+extends _layout
+block content
+block titles
+  - var title = "2カラムレイアウト"
+  body
+    header.ly_header
+      .ly_header_container
+        .sitetitle
+          h1.header-logo
+            a(href="/")
+              img(src="../images/header-logo.svg" alt='tankaku')
+          .navbtn
+        //- グローバルナビゲーション
+        include _navigation
+    //.ly_breadcrumb(パンくずリスト)
+    .ly_breadcrumb
+      .ly_breadcrumb_container
+        //-連想配列の定義
+        include _array.pug
+
+        ul.bl_breadNav
+          //- ①ul ②each .. in ③liはタブの位置に注意
+          each bc_elm in arr_bread
+            li: a(href=bc_elm.url)
+              | #{bc_elm.title}
+    // END .ly_breadcrumb(パンくずリスト)
+    main.ly_main#top
+      .ly_main_container
+        .ly_columns
+          .ly_columns_post
+            include _mainContainer.pug
+          .ly_columns_side
+            .bl_side_popular
+              a(href='#')
+                h2 Special
+                img(src='../images/latest-photo3.jpg')
+                p どこを切り取っても面白い。カラフルな家が立ち並ぶ水の都で色の観察散歩

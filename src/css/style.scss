@@ -767,3 +767,19 @@
     }
   }
 }
+
+/**
+* ********
+* サイドバーあり2カラムページ メインコンテナ
+* ********
+*/
+.sidebar-post {
+  .ly_main_container {
+    @include mainContainer_background();
+  }
+  .ly_columns {
+    display: grid;
+    grid-template-columns: 1fr 290px;
+    grid-gap: 40px;
+  }
+}

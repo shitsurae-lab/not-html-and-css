@@ -64,16 +64,27 @@ img {
 }
 
 //コンテナ幅を中央に配置
-@mixin mainContainer($mw: 1024px, $margin: 0 auto, $padding: 80px 20px 0) {
+@mixin mainContainer($mw: 1040px, $margin: 0 auto, $padding: 80px 20px 0) {
   max-width: $mw;
   margin: $margin;
   padding: $padding;
   @content;
 }
 
-@mixin centered($mw: 1024px, $p-tb: 0, $p-lr: 20px, $m-b: 0) {
+@mixin centered($mw: 1040px, $p-tb: 0, $p-lr: 20px, $m-b: 0) {
   max-width: $mw;
   padding: $p-tb $p-lr;
   margin: 0 auto $m-b;
+  @content;
+}
+
+@mixin mainContainer_background() {
+  padding: 80px 4% 0;
+  background-image: url('../images/post-bg.svg');
+  background-repeat: repeat-x;
+  background-position: 0 10px;
+  @include mq(md) {
+    @include mainContainer();
+  }
   @content;
 }
