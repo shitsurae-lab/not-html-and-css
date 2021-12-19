@@ -520,7 +520,7 @@ img {
 
 @media screen and (min-width: 768px) {
   .ly_header_container {
-    max-width: 1024px;
+    max-width: 1040px;
     margin: 0 auto;
     padding: 0 20px 0;
   }
@@ -621,7 +621,7 @@ img {
 }
 @media screen and (min-width: 768px) {
   .ly_breadcrumb_container {
-    max-width: 1024px;
+    max-width: 1040px;
     margin: 0 auto;
     padding: 12px 20px;
   }
@@ -659,7 +659,7 @@ img {
 }
 @media screen and (min-width: 768px) {
   .post .ly_main_container {
-    max-width: 1024px;
+    max-width: 1040px;
     margin: 0 auto;
     padding: 80px 20px 0;
   }
@@ -844,7 +844,7 @@ img {
 }
 @media screen and (min-width: 768px) {
   .ly_bottom_container {
-    max-width: 1024px;
+    max-width: 1040px;
     margin: 0 auto;
     padding: 60px 20px 0;
   }
@@ -899,6 +899,9 @@ img {
   line-height: 70px;
   text-align: center;
   color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .ly_bottom_container .bl_sns li a:hover {
   opacity: 0.8;
@@ -931,7 +934,7 @@ img {
 }
 @media screen and (min-width: 768px) {
   .ly_footer_container {
-    max-width: 1024px;
+    max-width: 1040px;
     margin: 0 auto;
     padding: 60px 20px;
   }
@@ -1033,7 +1036,7 @@ img {
 }
 @media screen and (min-width: 768px) {
   .home .ly_main_container {
-    max-width: 1024px;
+    max-width: 1040px;
     padding: 60px 20px;
     margin: 0 auto 0;
   }
@@ -1250,4 +1253,28 @@ img {
   opacity: 0.5;
 }
 
-/*# sourceMappingURL=main-9d09e44516ad1b5c6d99.css.map*/
+/**
+* ********
+* サイドバーあり2カラムページ メインコンテナ
+* ********
+*/
+.sidebar-post .ly_main_container {
+  padding: 80px 4% 0;
+  background-image: url(/images/post-bg-68ec72525a816e6c92ca.svg);
+  background-repeat: repeat-x;
+  background-position: 0 10px;
+}
+@media screen and (min-width: 768px) {
+  .sidebar-post .ly_main_container {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 80px 20px 0;
+  }
+}
+.sidebar-post .ly_columns {
+  display: grid;
+  grid-template-columns: 1fr 290px;
+  grid-gap: 40px;
+}
+
+/*# sourceMappingURL=main-d713d5d61606a69b6cbd.css.map*/
