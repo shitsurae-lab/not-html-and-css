@@ -175,6 +175,10 @@ module.exports = {
       template: './src/templates/sidebar-post.pug',
       filename: 'sidebar-post.html',
     }),
+    new HtmlWebpackPlugin({
+      template: './src/templates/form.pug',
+      filename: 'form.html',
+    }),
 
     new CleanWebpackPlugin(),
   ],
