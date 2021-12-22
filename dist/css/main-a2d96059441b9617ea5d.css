@@ -1152,7 +1152,6 @@ img {
 .home .ly_main_container .bl_media_image {
   flex: 0 0 30%;
   margin-right: 15px;
-  position: relative;
 }
 .home .ly_main_container .bl_media_text {
   flex: 1 1 auto;
@@ -1254,9 +1253,9 @@ img {
 }
 
 /**
-* ********
+* ********************
 * サイドバーあり2カラムページ メインコンテナ
-* ********
+* ********************
 */
 .sidebar-post .ly_main_container {
   padding: 80px 4% 0;
@@ -1276,5 +1275,111 @@ img {
   grid-template-columns: 1fr 290px;
   grid-gap: 40px;
 }
+.sidebar-post .bl_side_popular {
+  margin-bottom: 60px;
+  border: 1px solid #2b2b2b;
+}
+.sidebar-post .bl_side_popular a {
+  display: block;
+  position: relative;
+  color: #2b2b2b;
+  text-decoration: none;
+}
+.sidebar-post .bl_side_popular a:hover {
+  opacity: 0.5;
+}
+.sidebar-post .bl_side_popular h2 {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  margin: 0;
+  width: 80px;
+  height: 80px;
+  background: url(/images/side-titleshape-237b738defea0683ee5b.svg);
+  color: #ffffff;
+  font-family: "Croissant One", cursive;
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+.sidebar-post .bl_side_popular p {
+  margin: 0;
+  padding: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+.sidebar-post .bl_side_latest h2 {
+  margin: 0 0 10px;
+  font-family: "Croissant One", cursive;
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+.sidebar-post .bl_side_latest li {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  column-gap: 10px;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #d8d8d8;
+  padding-bottom: 1rem;
+}
+.sidebar-post .bl_side_latest li:hover {
+  opacity: 0.5;
+}
+.sidebar-post .bl_side_latest img {
+  border-radius: 50%;
+}
+.sidebar-post .bl_side_latest p {
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+.sidebar-post .bl_side_latest a {
+  color: #2b2b2b;
+  text-decoration: none;
+}
+.sidebar-post .bl_book h2 {
+  margin: 0 0 20px;
+  padding: 5px;
+  text-align: center;
+  font-family: "Croissant One", cursive;
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: #ffffff;
+  background: #2b2b2b;
+}
+.sidebar-post .bl_book_inner {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  column-gap: 10px;
+}
+.sidebar-post .bl_book_image {
+  grid-row: 1/3;
+}
+.sidebar-post .bl_book_text {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+.sidebar-post .bl_book p {
+  margin: 0;
+}
+.sidebar-post .bl_book_cta {
+  align-self: end;
+  justify-self: start;
+}
+.sidebar-post .bl_book a {
+  display: block;
+}
+.sidebar-post .bl_book_cta button {
+  padding: 0.5rem 3rem;
+  border-radius: 100px;
+  border: none;
+  background: #2b2b2b;
+  color: #ffffff;
+}
+.sidebar-post .bl_book_cta button:hover {
+  opacity: 0.5;
+}
 
-/*# sourceMappingURL=main-d713d5d61606a69b6cbd.css.map*/
+/*# sourceMappingURL=main-a2d96059441b9617ea5d.css.map*/

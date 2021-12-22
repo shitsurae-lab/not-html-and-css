@@ -15472,6 +15472,10 @@ if (href === 'http://localhost:8080/about.html') {
 //URLで分岐、bodyにクラス付与
 const url = location.href;
 const target = document.querySelector('body');
+
+//カード型レイアウトのタグ(HTML)を一部取得
+const tagList = document.querySelector('.bl_latest_item:nth-child(2) .bottom');
+
 if (url.includes('/about.html')) {
   target.classList.add('sample');
 } else if (url.includes('/post.html')) {
@@ -15480,12 +15484,13 @@ if (url.includes('/about.html')) {
   target.classList.add('sidebar-post', 'post');
 } else {
   target.classList.add('home');
+  //カード型レイアウトのタグ(HTML)を一部削除
+  tagList.remove();
+  console.log(tagList);
 }
-
 //カード型レイアウトのタグ(HTML)を一部削除
-const tagList = document.querySelector('.bl_latest_item:nth-child(2)');
-
-// tagList.querySelector('.bl_latest_text span:nth-child(2)').remove();
+// const tagList = document.querySelector('.bl_latest_item:nth-child(2) .bottom');
+// tagList.remove();
 
 
 /***/ }),
@@ -15618,23 +15623,37 @@ var __webpack_exports__ = {};
   !*** ./src/js/main.js ***!
   \************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _script_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./script.js */ "./src/js/script.js");
-/* harmony import */ var _drawer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./drawer.js */ "./src/js/drawer.js");
-/* harmony import */ var _drawer_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_drawer_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _sample_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./sample.js */ "./src/js/sample.js");
-/* harmony import */ var _sample_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_sample_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var normalize_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! normalize.css */ "./node_modules/normalize.css/normalize.css");
-/* harmony import */ var normalize_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(normalize_css__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _css_style_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../css/style.scss */ "./src/css/style.scss");
-/* harmony import */ var _css_style_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_css_style_scss__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _fortawesome_fontawesome_free_js_fontawesome__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @fortawesome/fontawesome-free/js/fontawesome */ "./node_modules/@fortawesome/fontawesome-free/js/fontawesome.js");
-/* harmony import */ var _fortawesome_fontawesome_free_js_fontawesome__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_js_fontawesome__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _fortawesome_fontawesome_free_js_solid__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @fortawesome/fontawesome-free/js/solid */ "./node_modules/@fortawesome/fontawesome-free/js/solid.js");
-/* harmony import */ var _fortawesome_fontawesome_free_js_solid__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_js_solid__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _fortawesome_fontawesome_free_js_regular__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @fortawesome/fontawesome-free/js/regular */ "./node_modules/@fortawesome/fontawesome-free/js/regular.js");
-/* harmony import */ var _fortawesome_fontawesome_free_js_regular__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_js_regular__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _fortawesome_fontawesome_free_js_brands__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @fortawesome/fontawesome-free/js/brands */ "./node_modules/@fortawesome/fontawesome-free/js/brands.js");
-/* harmony import */ var _fortawesome_fontawesome_free_js_brands__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_js_brands__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _fortawesome_fontawesome_free_js_fontawesome__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fortawesome/fontawesome-free/js/fontawesome */ "./node_modules/@fortawesome/fontawesome-free/js/fontawesome.js");
+/* harmony import */ var _fortawesome_fontawesome_free_js_fontawesome__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_js_fontawesome__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _fortawesome_fontawesome_free_js_solid__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fortawesome/fontawesome-free/js/solid */ "./node_modules/@fortawesome/fontawesome-free/js/solid.js");
+/* harmony import */ var _fortawesome_fontawesome_free_js_solid__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_js_solid__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _fortawesome_fontawesome_free_js_regular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fortawesome/fontawesome-free/js/regular */ "./node_modules/@fortawesome/fontawesome-free/js/regular.js");
+/* harmony import */ var _fortawesome_fontawesome_free_js_regular__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_js_regular__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _fortawesome_fontawesome_free_js_brands__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fortawesome/fontawesome-free/js/brands */ "./node_modules/@fortawesome/fontawesome-free/js/brands.js");
+/* harmony import */ var _fortawesome_fontawesome_free_js_brands__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_js_brands__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _script_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./script.js */ "./src/js/script.js");
+/* harmony import */ var _drawer_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./drawer.js */ "./src/js/drawer.js");
+/* harmony import */ var _drawer_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_drawer_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _sample_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./sample.js */ "./src/js/sample.js");
+/* harmony import */ var _sample_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_sample_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var normalize_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! normalize.css */ "./node_modules/normalize.css/normalize.css");
+/* harmony import */ var normalize_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(normalize_css__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _css_style_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../css/style.scss */ "./src/css/style.scss");
+/* harmony import */ var _css_style_scss__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_css_style_scss__WEBPACK_IMPORTED_MODULE_8__);
+//font awesome
+// Font-awesome 5 doesn't work(https://bit.ly/3GdFxAi)
+// import fontawesome from '@fortawesome/fontawesome-free/scss/fontawesome.scss';
+// import regular from '@fortawesome/fontawesome-free/scss/regular.scss';
+// import solid from '@fortawesome/fontawesome-free/scss/solid.scss';
+// import brands from '@fortawesome/fontawesome-free/scss/brands.scss';
+
+// fontawesome.library.add(solid, regular, brands);
+
+
+
+
+
+
 /*
  *JavaScript
  */
@@ -15653,22 +15672,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-//font awesome
-// Font-awesome 5 doesn't work(https://bit.ly/3GdFxAi)
-// import fontawesome from '@fortawesome/fontawesome-free/scss/fontawesome.scss';
-// import regular from '@fortawesome/fontawesome-free/scss/regular.scss';
-// import solid from '@fortawesome/fontawesome-free/scss/solid.scss';
-// import brands from '@fortawesome/fontawesome-free/scss/brands.scss';
-
-// fontawesome.library.add(solid, regular, brands);
-
-
-
-
-
-
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=main-cf3d50cd183f1ac1afb2.js.map
+//# sourceMappingURL=main-a8727d18f4dfc0f30e2d.js.map
