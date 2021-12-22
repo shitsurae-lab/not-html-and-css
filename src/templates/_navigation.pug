@@ -1,0 +1,7 @@
+include _array.pug
+nav
+  //- まずスマホのときのメニューをCSSで表示。OKであればHTMLにCSS(collapse display:none)を加えて非表示にする
+  ul.header-nav.collapse
+    each elm in nav
+      li: a(href=elm.url)
+        | #{elm.title}
