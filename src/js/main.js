@@ -1,3 +1,17 @@
+//font awesome
+// Font-awesome 5 doesn't work(https://bit.ly/3GdFxAi)
+// import fontawesome from '@fortawesome/fontawesome-free/scss/fontawesome.scss';
+// import regular from '@fortawesome/fontawesome-free/scss/regular.scss';
+// import solid from '@fortawesome/fontawesome-free/scss/solid.scss';
+// import brands from '@fortawesome/fontawesome-free/scss/brands.scss';
+
+// fontawesome.library.add(solid, regular, brands);
+
+import '@fortawesome/fontawesome-free/js/fontawesome';
+import '@fortawesome/fontawesome-free/js/solid';
+import '@fortawesome/fontawesome-free/js/regular';
+import '@fortawesome/fontawesome-free/js/brands';
+
 /*
  *JavaScript
  */
@@ -15,17 +29,3 @@ import './sample.js';
 //normalize.css
 import 'normalize.css';
 import '../css/style.scss';
-
-//font awesome
-// Font-awesome 5 doesn't work(https://bit.ly/3GdFxAi)
-// import fontawesome from '@fortawesome/fontawesome-free/scss/fontawesome.scss';
-// import regular from '@fortawesome/fontawesome-free/scss/regular.scss';
-// import solid from '@fortawesome/fontawesome-free/scss/solid.scss';
-// import brands from '@fortawesome/fontawesome-free/scss/brands.scss';
-
-// fontawesome.library.add(solid, regular, brands);
-
-import '@fortawesome/fontawesome-free/js/fontawesome';
-import '@fortawesome/fontawesome-free/js/solid';
-import '@fortawesome/fontawesome-free/js/regular';
-import '@fortawesome/fontawesome-free/js/brands';
