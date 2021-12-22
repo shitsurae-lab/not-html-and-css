@@ -663,7 +663,6 @@
     .bl_media_image {
       flex: 0 0 30%;
       margin-right: 15px;
-      position: relative;
     }
     //メディアオブジェクト(テキスト)
     .bl_media_text {
@@ -769,10 +768,11 @@
 }
 
 /**
-* ********
+* ********************
 * サイドバーあり2カラムページ メインコンテナ
-* ********
+* ********************
 */
+//.sidebar-postはsidebar-post.htmlのbodyにつく
 .sidebar-post {
   .ly_main_container {
     @include mainContainer_background();
@@ -782,4 +782,142 @@
     grid-template-columns: 1fr 290px;
     grid-gap: 40px;
   }
+
+  .bl_side_popular {
+    margin-bottom: 60px;
+    border: 1px solid $color-secondary;
+    a {
+      display: block;
+      position: relative;
+      color: $color-secondary;
+      text-decoration: none;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  // サイドバー上部
+  .bl_side_popular {
+    h2 {
+      //ポジションとグリッドレイアウトの併用
+      display: grid;
+      place-items: center;
+      //※ボックスをポジションで配置、ボックス内コンテンツの行揃えを調整
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      margin: 0;
+      width: 80px;
+      height: 80px;
+
+      background: url(../images/side-titleshape.svg);
+      color: $color-primary;
+      font-family: 'Croissant One', cursive;
+      font-weight: 400;
+      font-size: 0.75rem;
+    }
+
+    p {
+      margin: 0;
+      padding: 1rem;
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+  }
+
+  .bl_side_latest {
+    h2 {
+      margin: 0 0 10px;
+      font-family: 'Croissant One', cursive;
+      font-weight: 400;
+      font-size: 1.25rem;
+    }
+    li {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      column-gap: 10px;
+      align-items: center;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid $color-light-gray;
+      padding-bottom: 1rem;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+
+    img {
+      border-radius: 50%;
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.75rem;
+      line-height: 1.5;
+    }
+
+    a {
+      color: $color-secondary;
+      text-decoration: none;
+    }
+  }
+
+  .bl_book {
+    h2 {
+      margin: 0 0 20px;
+      padding: 5px;
+      text-align: center;
+      font-family: 'Croissant One', cursive;
+      font-weight: 400;
+      font-size: 1.25rem;
+      color: $color-primary;
+      background: $color-secondary;
+    }
+
+    //グリッドレイアウト
+    &_inner {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      column-gap: 10px;
+    }
+
+    //画像
+    &_image {
+      grid-row: 1 / 3;
+    }
+
+    //テキスト範囲
+    &_text {
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+    //テキストマージン
+    p {
+      margin: 0;
+    }
+
+    //cta 範囲
+    &_cta {
+      align-self: end;
+      justify-self: start;
+    }
+
+    a {
+      display: block;
+    }
+    //ctaボタン
+    &_cta button {
+      padding: 0.5rem 3rem;
+      border-radius: 100px;
+      border: none;
+      background: $color-secondary;
+      color: $color-primary;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+  //END /bl_book
 }
+//END sidebar-post
