@@ -704,7 +704,7 @@ img {
 @media screen and (min-width: 768px) {
   .post .ly_main_container .bl_post_content {
     max-width: 600px;
-    padding: 0 0;
+    padding: 0 0 0;
     margin: 0 auto 60px;
   }
 }
@@ -802,7 +802,7 @@ img {
 @media screen and (min-width: 768px) {
   .post .ly_main_container .bl_postFooter {
     max-width: 600px;
-    padding: 0 0;
+    padding: 0 0 0;
     margin: 0 auto 60px;
   }
 }
@@ -1037,13 +1037,13 @@ img {
 @media screen and (min-width: 768px) {
   .home .ly_main_container {
     max-width: 1040px;
-    padding: 60px 20px;
+    padding: 60px 20px 60px;
     margin: 0 auto 0;
   }
 }
 .home .ly_main_container .bl_lead {
   max-width: 600px;
-  padding: 0 20px;
+  padding: 0 20px 0;
   margin: 0 auto 60px;
   padding: 0;
   text-align: center;
@@ -1197,7 +1197,7 @@ img {
 @media screen and (min-width: 768px) {
   .home .ly_news_container {
     max-width: 768px;
-    padding: 60px 20px;
+    padding: 60px 20px 60px;
     margin: 0 auto 0;
   }
 }
@@ -1382,4 +1382,80 @@ img {
   opacity: 0.5;
 }
 
-/*# sourceMappingURL=main-a2d96059441b9617ea5d.css.map*/
+.apply .ly_catch_container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 60px 4% 60px;
+  background-image: url(/images/form-title-bg1-0908e961b2e84b93b7a4.svg), url(/images/form-title-bg2-ef4d2f0100221ba61a9a.svg);
+  background-repeat: no-repeat;
+  background-position: left top 10px, right top 10px;
+}
+@media screen and (min-width: 768px) {
+  .apply .ly_catch_container {
+    max-width: 1040px;
+    padding: 60px 20px 60px;
+    margin: 0 auto 0;
+  }
+}
+.apply .ly_form_container {
+  padding: 0 4% 30px;
+  margin: 0 auto;
+  max-width: 640px;
+}
+@media screen and (min-width: 768px) {
+  .apply .ly_form_container {
+    max-width: 640px;
+    padding: 0px 20px 30px;
+    margin: 0 auto 0;
+  }
+}
+.apply .ly_form_container form p {
+  margin: 0 0 30px;
+  line-height: 1.9;
+}
+.apply .ly_form_container form .required {
+  margin-left: 10px;
+  font-size: 0.875rem;
+  color: #73cbd6;
+}
+.apply .ly_form_container form input[type=text],
+.apply .ly_form_container form input[type=email] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #747474;
+}
+.apply .ly_form_container form select {
+  -webkit-appearance: none;
+  border: 1px solid #d8d8d8;
+  padding: 4px 2rem 4px 4px;
+  border-radius: 4px;
+  background: url(/images/caret-down-6aab26eded70e13d16b2.svg) no-repeat;
+  background-position: right 6px center;
+  background-size: 12px 12px;
+  font-size: 16px;
+}
+.apply .ly_form_container form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #747474;
+  line-height: 1.5;
+}
+.apply .ly_form_container form input[type=checkbox] {
+  margin-right: 10px;
+}
+.apply .ly_form_container form .form_btn {
+  margin-bottom: 0;
+  text-align: center;
+}
+.apply .ly_form_container form input[type=submit] {
+  padding: 20px 30px;
+  background: #2b2b2b;
+  border: none;
+  color: #ffffff;
+  border-radius: 100px;
+}
+.apply .ly_form_container form input[type=submit]:hover {
+  opacity: 0.5;
+}
+
+/*# sourceMappingURL=main-d05b757c83107f1af31f.css.map*/

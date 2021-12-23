@@ -15480,6 +15480,8 @@ if (url.includes('/about.html')) {
   target.classList.add('sample');
 } else if (url.includes('/post.html')) {
   target.classList.add('post');
+} else if (url.includes('/form.html')) {
+  target.classList.add('apply');
 } else if (url.includes('/sidebar-post.html')) {
   target.classList.add('sidebar-post', 'post');
 } else {
@@ -15676,4 +15678,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=main-a8727d18f4dfc0f30e2d.js.map
+//# sourceMappingURL=main-44bca4a08883a4fd7367.js.map
