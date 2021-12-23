@@ -27,9 +27,9 @@ block pageContent
                             h3: a(href=elm.url)
                                 | #{elm.title}
                             .bl_latest_tag
-                                span: a(href='')
+                                span.top: a(href='')
                                     | #{elm.tag}
-                                span: a(href='')
+                                span.bottom: a(href='')
                                     | #{elm.tag02}
                             .bl_info
                                 span #{elm.info}
@@ -48,9 +48,8 @@ block pageContent
                             a(href='#')
                                 img(src=elm.image)
                         .bl_media_text
-                            h3
-                                a(href='#')
-                                 | #{elm.title}
+                            h3: a(href='#')
+                                | #{elm.title}
                             p #{elm.desc}
                             .bl_info
                                 span #{elm.info}
