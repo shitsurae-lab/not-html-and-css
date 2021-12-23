@@ -8,6 +8,29 @@ html(lang="ja")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     //- <script  src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"></script>
     title #{title}
+  body
+    header.ly_header
+      .ly_header_container
+        .sitetitle
+          h1.header-logo
+            a(href="/")
+              img(src="../images/header-logo.svg" alt='tankaku')
+          .navbtn
+        //- グローバルナビゲーション
+        include _navigation
+    //.ly_breadcrumb(パンくずリスト)
+    .ly_breadcrumb
+      .ly_breadcrumb_container
+        //-連想配列の定義
+        include _array.pug
+
+        ul.bl_breadNav
+          //- ①ul ②each .. in ③liはタブの位置に注意
+          each bc_elm in arr_bread
+            li: a(href=bc_elm.url)
+              | #{bc_elm.title}
+    // END .ly_breadcrumb(パンくずリスト)
 block content
+block container
 block bottom
     include _bottom
