@@ -9,6 +9,8 @@ if (url.includes('/about.html')) {
   target.classList.add('sample');
 } else if (url.includes('/post.html')) {
   target.classList.add('post');
+} else if (url.includes('/form.html')) {
+  target.classList.add('apply');
 } else if (url.includes('/sidebar-post.html')) {
   target.classList.add('sidebar-post', 'post');
 } else {
