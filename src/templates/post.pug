@@ -10,35 +10,8 @@ block titles
             a(href="/")
               img(src="../images/header-logo.svg" alt='tankaku')
           .navbtn
-        //END .bl_header
 
-        //- 変数を複数定義するとき「-」と「var」の間は一行開けて改行(タブも残さない)
-        -
-
-          var array = ['HOME', '最新の特集', '地域別に読む','連載一覧', 'インタビュー']
-
-          var nav = [
-            {
-              title: 'HOME',
-              url: '/'
-            },
-            {
-              title: '最新の特集',
-              url: '/new'
-            },
-            {
-              title: '地域別に読む',
-              url: '/local'
-            },
-            {
-              title: '連載一覧',
-              url: '/serialization'
-            },
-            {
-              title: 'インタビュー',
-              url: '/interview'
-            },
-          ]
+        include _array.pug
         nav
           //- まずスマホのときのメニューをCSSで表示。OKであればHTMLにCSS(collapse display:none)を加えて非表示にする
           ul.header-nav.collapse
@@ -76,7 +49,7 @@ block titles
               <i class="fas fa-clock"></i>
               | 2021.6.16
           .post_headerimage
-          img(src="../images/post-headerimage.jpg")
+            img(src="../images/post-headerimage.jpg")
         //END .bl_post_header
         .bl_post_content
           h2 ファーマーズマーケットで見つけた「地元」の味
@@ -126,7 +99,8 @@ block titles
 
         //END .bl_post_content
         footer.bl_postFooter
-          h2 <i class='fas fa-pen-fancy'>プロフィール</i>
+          h2 <i class='fas fa-pen-fancy'></i>
+           | プロフィール
           .bl_postFooter_profile
             .bl_postFooter_photo
               img(src="../images/writer.jpg")
