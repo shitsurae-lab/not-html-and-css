@@ -71,9 +71,9 @@ img {
   @content;
 }
 
-@mixin centered($mw: 1040px, $p-tb: 0, $p-lr: 20px, $m-b: 0) {
+@mixin centered($mw: 1040px, $p-t: 0, $p-b: 0, $p-lr: 20px, $m-b: 0) {
   max-width: $mw;
-  padding: $p-tb $p-lr;
+  padding: $p-t $p-lr $p-b;
   margin: 0 auto $m-b;
   @content;
 }
