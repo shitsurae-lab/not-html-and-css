@@ -3,5 +3,50 @@ block titles
   - var title = 'お問い合わせフォーム';
 block content
 block container
+  .ly_catch
+    .ly_catch_container
+        h2.bl-apply-title
+          span Tansaku! 10th Anniversary
+          br
+          | キャンペーン応募フォーム
+        p Tansaku! が10周年を迎えたのを記念して、プレゼントキャンペーンを実施します。ロゴ入りのオリジナルステンレスマグ、Tシャツ、トートバッグをそれぞれ5名様にプレゼント。当選者にはメールでご連絡いたします。
+    .ly_form
+      .ly_form_container
+        form#form.form(action='#')
+          p
+            label(for='question1') お名前
+              span.required 必須
+            br
+            input(type='text' name='question1' id='question1' placeholder='お名前' required)
+
+          p
+            label(for='question2') メールアドレス
+              span.required 必須
+              br
+              input(type='email' name='question2' id='question2' placeholder='mail@example.com' required)
+
+          p
+            label(for='present') 希望のプレゼント
+              span.required 必須
+              br
+              select(name='present',  id='present')
+                option プレゼントを選んでください
+                option(value='1' required) ステンレスマグ
+                option(value='2') Tシャツ
+                option(value='3') トートバッグ
+
+          p
+            label(for='message') メッセージ
+            br
+            textarea(id='message' name='message' cols='30' rows='10')
+
+          // チェックボックス(ラベルテキストとの関連になるので、これのみlabelで囲む)
+          p
+              label
+                input(type="checkbox" name='privacy' value='privacy required')
+                | プライバシーポリシーに同意する
+
+          p.form_btn
+            input(type='submit' name='send' value='キャンペーンに応募する')
 block bottom
     include _bottom
