@@ -536,7 +536,7 @@
   .ly_main_container {
     padding: 60px 4%;
     @include mq(md) {
-      @include centered($p-tb: 60px, $p-lr: 20px);
+      @include centered($p-t: 60px, $p-b: 60px, $p-lr: 20px);
     }
 
     //リード文
@@ -713,7 +713,7 @@
   .ly_news_container {
     padding: 60px 4%;
     @include mq(md) {
-      @include centered($mw: 768px, $p-tb: 60px);
+      @include centered($mw: 768px, $p-t: 60px, $p-b: 60px);
     }
 
     //見出し
@@ -778,9 +778,12 @@
     @include mainContainer_background();
   }
   .ly_columns {
-    display: grid;
-    grid-template-columns: 1fr 290px;
-    grid-gap: 40px;
+    @include mq(md) {
+      //タブレット以下ではdisplay: block;
+      display: grid;
+      grid-template-columns: 1fr 290px;
+      grid-gap: 40px;
+    }
   }
 
   .bl_side_popular {
@@ -827,6 +830,8 @@
   }
 
   .bl_side_latest {
+    //モジュール下に余白
+    margin-bottom: 60px;
     h2 {
       margin: 0 0 10px;
       font-family: 'Croissant One', cursive;
@@ -864,6 +869,7 @@
   }
 
   .bl_book {
+    margin-bottom: 60px;
     h2 {
       margin: 0 0 20px;
       padding: 5px;
@@ -921,3 +927,85 @@
   //END /bl_book
 }
 //END sidebar-post
+
+.apply {
+  //メインコンテンツ(外側)
+
+  .ly_catch_container {
+    @include mainContainer($padding: 60px 4% 60px);
+    background-image: url('../images/form-title-bg1.svg'),
+      url('../images/form-title-bg2.svg');
+    background-repeat: no-repeat;
+    background-position: left top 10px, right top 10px; //きちんと書くとleft 0px top 10px, right 0px top 10px
+    //background-imageは先に指定したものが上に重なる
+    // 【重要】background: url(一番上に重なる画像ファイルのパス), url(次に重なる画像ファイルのパス), #背景色
+
+    @include mq(md) {
+      @include centered($p-t: 60px, $p-b: 60px, $p-lr: 20px);
+    }
+  }
+
+  .ly_form_container {
+    padding: 0 4% 30px;
+    margin: 0 auto;
+    max-width: 640px;
+    @include mq(md) {
+      @include centered($mw: 640px, $p-t: 0px, $p-b: 30px, $p-lr: 20px);
+    }
+    form {
+      p {
+        margin: 0 0 30px;
+        line-height: 1.9;
+      }
+      .required {
+        margin-left: 10px;
+        font-size: 0.875rem;
+        color: $color-info;
+      }
+      input[type='text'],
+      input[type='email'] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid $color-wabi;
+      }
+      select {
+        -webkit-appearance: none; //メニューリストのカスタマイズに必須
+        border: 1px solid $color-light-gray;
+        padding: 4px 2rem 4px 4px;
+        border-radius: 4px;
+        background: url('../images/caret-down.svg') no-repeat;
+        background-position: right 6px center;
+        background-size: 12px 12px;
+        font-size: 16px;
+      }
+
+      textarea {
+        width: 100%;
+        // height: 6rem;
+        padding: 10px;
+        border: 1px solid $color-wabi;
+        line-height: 1.5;
+      }
+
+      input[type='checkbox'] {
+        margin-right: 10px;
+      }
+
+      .form_btn {
+        margin-bottom: 0;
+        text-align: center;
+      }
+      input[type='submit'] {
+        padding: 20px 30px;
+        background: $color-secondary;
+        border: none;
+        color: $color-primary;
+        border-radius: 100px;
+
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}
