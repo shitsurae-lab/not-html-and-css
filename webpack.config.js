@@ -129,16 +129,16 @@ module.exports = {
   },
   plugins: [
     //@beyonk/google-fonts-webpack-plugin https://bit.ly/332RTNp
-    new GoogleFontsPlugin({
-      fonts: [
-        { family: 'Roboto', variants: ['400'], display: 'block' },
-        {
-          family: 'Croissant One',
-          variants: ['400'],
-          display: 'swap',
-        },
-      ],
-    }),
+    // new GoogleFontsPlugin({
+    //   fonts: [
+    //     { family: 'Roboto', variants: ['400'], display: 'block' },
+    //     {
+    //       family: 'Croissant One',
+    //       variants: ['400'],
+    //       display: 'swap',
+    //     },
+    //   ],
+    // }),
     // new VueLoaderPlugin(),
     new MiniCssExtractPlugin({
       //srcと同じ名前のCSSファイルがdistに出力される(src内のmy.cssにあわせる=> main.css)
@@ -184,7 +184,7 @@ module.exports = {
   ],
   //webpack-dev-server ポート番号変更 https://bit.ly/3Caxfbp
   devServer: {
-    port: 8080, // ポート番号
+    port: 8400, // ポート番号
   },
   // node_modules を監視（watch）対象から除外
   watchOptions: {
